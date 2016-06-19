@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name meetjestad)(type KiCad)(uri "$(KIPRJMOD)/components/meetjestad.pretty")(options "")(descr ""))
+  (lib (name w_conn_misc)(type Legacy)(uri "$(KIPRJMOD)/components/mod_conn_misc/w_conn_misc.mod")(options "")(descr ""))
+  (lib (name w_conn_jst-ph)(type Legacy)(uri "$(KIPRJMOD)/components/mod_conn_jst-ph/w_conn_jst-ph.mod")(options "")(descr ""))
+)
