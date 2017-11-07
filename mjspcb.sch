@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:mjspcb-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:meetjestad
-LIBS:platform_v1-cache
+LIBS:mjspcb-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -37,7 +38,7 @@ encoding utf-8
 Sheet 1 1
 Title "Meetplatform Meet je stad!"
 Date ""
-Rev "1"
+Rev "2"
 Comp "Universiteit Amersfoort"
 Comment1 "CC-BY Harmen G. Zijp"
 Comment2 "Powered by 3xAAA, 1xLiPo or 5V DC"
@@ -80,34 +81,34 @@ $EndComp
 $Comp
 L CONN_01X04 P3
 U 1 1 571A1889
-P 2050 5650
-F 0 "P3" H 2050 5900 50  0000 C CNN
-F 1 "HTU21D breakout" V 2150 5650 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 2050 5650 50  0001 C CNN
-F 3 "" H 2050 5650 50  0000 C CNN
-	1    2050 5650
+P 2750 5650
+F 0 "P3" H 2750 5900 50  0000 C CNN
+F 1 "I2C breakout" V 2850 5650 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 2750 5650 50  0001 C CNN
+F 3 "" H 2750 5650 50  0000 C CNN
+	1    2750 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR03
 U 1 1 571A19B4
-P 1700 5900
-F 0 "#PWR03" H 1700 5650 50  0001 C CNN
-F 1 "GND" H 1700 5750 50  0000 C CNN
-F 2 "" H 1700 5900 50  0000 C CNN
-F 3 "" H 1700 5900 50  0000 C CNN
-	1    1700 5900
+P 2100 5900
+F 0 "#PWR03" H 2100 5650 50  0001 C CNN
+F 1 "GND" H 2100 5750 50  0000 C CNN
+F 2 "" H 2100 5900 50  0000 C CNN
+F 3 "" H 2100 5900 50  0000 C CNN
+	1    2100 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X03 P4
 U 1 1 571A1C52
-P 3400 5300
-F 0 "P4" H 3400 5500 50  0000 C CNN
-F 1 "GPS" V 3500 5300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x03" H 3400 5300 50  0001 C CNN
-F 3 "" H 3400 5300 50  0000 C CNN
-	1    3400 5300
+P 4450 5300
+F 0 "P4" H 4450 5500 50  0000 C CNN
+F 1 "GPS" V 4550 5300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03" H 4450 5300 50  0001 C CNN
+F 3 "" H 4450 5300 50  0000 C CNN
+	1    4450 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -132,76 +133,76 @@ A3
 $Comp
 L GND #PWR04
 U 1 1 571A5E14
-P 5500 5700
-F 0 "#PWR04" H 5500 5450 50  0001 C CNN
-F 1 "GND" H 5500 5550 50  0000 C CNN
-F 2 "" H 5500 5700 50  0000 C CNN
-F 3 "" H 5500 5700 50  0000 C CNN
-	1    5500 5700
+P 6000 5700
+F 0 "#PWR04" H 6000 5450 50  0001 C CNN
+F 1 "GND" H 6000 5550 50  0000 C CNN
+F 2 "" H 6000 5700 50  0000 C CNN
+F 3 "" H 6000 5700 50  0000 C CNN
+	1    6000 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X02 P5
 U 1 1 571A618C
-P 5700 5150
-F 0 "P5" H 5700 5300 50  0000 C CNN
-F 1 "piezo" V 5800 5150 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 5700 5150 50  0001 C CNN
-F 3 "" H 5700 5150 50  0000 C CNN
-	1    5700 5150
+P 6200 5150
+F 0 "P5" H 6200 5300 50  0000 C CNN
+F 1 "piezo" V 6300 5150 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 6200 5150 50  0001 C CNN
+F 3 "" H 6200 5150 50  0000 C CNN
+	1    6200 5150
 	1    0    0    -1  
 $EndComp
-Text GLabel 4800 5100 0    60   Input ~ 0
+Text GLabel 5300 5100 0    60   Input ~ 0
 A3
 $Comp
 L R R9
 U 1 1 571A62D2
-P 5050 5100
-F 0 "R9" V 4950 5100 50  0000 C CNN
-F 1 "10k" V 5050 5100 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4980 5100 50  0001 C CNN
-F 3 "" H 5050 5100 50  0000 C CNN
-	1    5050 5100
+P 5550 5100
+F 0 "R9" V 5450 5100 50  0000 C CNN
+F 1 "10k" V 5550 5100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5480 5100 50  0001 C CNN
+F 3 "" H 5550 5100 50  0000 C CNN
+	1    5550 5100
 	0    1    1    0   
 $EndComp
 $Comp
 L CONN_01X02 P6
 U 1 1 571A70AE
-P 6900 5250
-F 0 "P6" H 6900 5400 50  0000 C CNN
-F 1 "BPW34" V 7000 5250 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 6900 5250 50  0001 C CNN
-F 3 "" H 6900 5250 50  0000 C CNN
-	1    6900 5250
+P 7300 5250
+F 0 "P6" H 7300 5400 50  0000 C CNN
+F 1 "BPW34" V 7400 5250 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 7300 5250 50  0001 C CNN
+F 3 "" H 7300 5250 50  0000 C CNN
+	1    7300 5250
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR05
 U 1 1 571A71F6
-P 6600 5800
-F 0 "#PWR05" H 6600 5550 50  0001 C CNN
-F 1 "GND" H 6600 5650 50  0000 C CNN
-F 2 "" H 6600 5800 50  0000 C CNN
-F 3 "" H 6600 5800 50  0000 C CNN
-	1    6600 5800
+P 7000 5800
+F 0 "#PWR05" H 7000 5550 50  0001 C CNN
+F 1 "GND" H 7000 5650 50  0000 C CNN
+F 2 "" H 7000 5800 50  0000 C CNN
+F 3 "" H 7000 5800 50  0000 C CNN
+	1    7000 5800
 	1    0    0    -1  
 $EndComp
-Text GLabel 6300 5300 0    60   Input ~ 0
+Text GLabel 6700 5300 0    60   Input ~ 0
 A2
 $Comp
 L R R12
 U 1 1 571A727B
-P 6600 5550
-F 0 "R12" V 6680 5550 50  0000 C CNN
-F 1 "100k" V 6600 5550 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6530 5550 50  0001 C CNN
-F 3 "" H 6600 5550 50  0000 C CNN
-	1    6600 5550
+P 7000 5550
+F 0 "R12" V 7080 5550 50  0000 C CNN
+F 1 "100k" V 7000 5550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6930 5550 50  0001 C CNN
+F 3 "" H 7000 5550 50  0000 C CNN
+	1    7000 5550
 	1    0    0    -1  
 $EndComp
-Text Notes 4600 4750 0    60   ~ 0
+Text Notes 5100 4750 0    60   ~ 0
 Disdrometer
-Text Notes 6100 6200 0    60   ~ 0
+Text Notes 6500 6200 0    60   ~ 0
 aquatictechtank.net/viewtopic.php?f=11&t=150
 Text GLabel 3200 3800 2    60   Input ~ 0
 D6
@@ -209,40 +210,40 @@ Text GLabel 3200 3900 2    60   Input ~ 0
 D7
 Text GLabel 3200 3700 2    60   Input ~ 0
 D5
-Text Notes 7100 5750 0    60   ~ 0
+Text Notes 7300 5750 0    60   ~ 0
 forum.arduino.cc/index.php?topic=37975
 $Comp
 L CONN_01X02 P7
 U 1 1 571AB793
-P 8600 5250
-F 0 "P7" H 8600 5400 50  0000 C CNN
-F 1 "electrodes" V 8700 5250 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 8600 5250 50  0001 C CNN
-F 3 "" H 8600 5250 50  0000 C CNN
-	1    8600 5250
+P 8800 5250
+F 0 "P7" H 8800 5400 50  0000 C CNN
+F 1 "electrodes" V 8900 5250 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 8800 5250 50  0001 C CNN
+F 3 "" H 8800 5250 50  0000 C CNN
+	1    8800 5250
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R13
 U 1 1 571AB890
-P 8050 5300
-F 0 "R13" V 8150 5300 50  0000 C CNN
-F 1 "10k" V 8050 5300 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7980 5300 50  0001 C CNN
-F 3 "" H 8050 5300 50  0000 C CNN
-	1    8050 5300
+P 8250 5300
+F 0 "R13" V 8350 5300 50  0000 C CNN
+F 1 "10k" V 8250 5300 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8180 5300 50  0001 C CNN
+F 3 "" H 8250 5300 50  0000 C CNN
+	1    8250 5300
 	0    1    1    0   
 $EndComp
-Text GLabel 7700 5500 0    60   Input ~ 0
+Text GLabel 7900 5500 0    60   Input ~ 0
 A1
-Text GLabel 7700 5300 0    60   Input ~ 0
+Text GLabel 7900 5300 0    60   Input ~ 0
 D6
-Text GLabel 7700 5200 0    60   Input ~ 0
+Text GLabel 7900 5200 0    60   Input ~ 0
 D7
-Text Notes 2400 6050 0    60   ~ 0
+Text Notes 3050 6050 0    60   ~ 0
 www.sparkfun.com/products/13740
 Text Notes 900  6250 0    60   ~ 0
-www.sparkfun.com/products/12064
+www.sparkfun.com/products/13763
 $Bitmap
 Pos 10950 6850
 Scale 1.000000
@@ -407,7 +408,7 @@ C0 58 82 E0 69 86 37 6D 0B A7 C2 93 89 E9 5D C5 88 2A 90 FC 74 0B B0 01 D5 F6 29
 56 96 2D 0B ED F6 7F C2 CC A3 57 85 CF 8C 0D E1 5F 0E 87 B5 3C 11 5E EB 0D 32 F1 5C 0A B0 54 C9 
 63 98 05 E1 6B C4 72 91 8E EA 95 27 8C 4B 0B 6B 30 6B 95 2D 08 DF 47 79 14 D8 40 20 A9 90 96 2D 
 E1 E7 3D C6 74 F3 E0 6E B9 00 E4 0E CC EC 2A 00 9E 03 F9 2E 43 53 93 3B E7 B1 3D FE 0F E4 2C B5 
-B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 00 
+B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
 $Comp
@@ -451,11 +452,11 @@ Text GLabel 3900 3050 2    60   Input ~ 0
 RST
 Text Notes 800  4400 0    60   ~ 12
 core schematic
-Text Notes 4400 6500 0    60   ~ 12
+Text Notes 5000 6500 0    60   ~ 12
 optional sensors
-Text Notes 6100 4750 0    60   ~ 0
+Text Notes 6500 4750 0    60   ~ 0
 PAR meter
-Text Notes 7500 4750 0    60   ~ 0
+Text Notes 7700 4750 0    60   ~ 0
 Soil moisture sensor
 $Comp
 L R R6
@@ -504,36 +505,36 @@ $EndComp
 $Comp
 L R R10
 U 1 1 5721847C
-P 5300 5350
-F 0 "R10" V 5400 5350 50  0000 C CNN
-F 1 "1k" V 5300 5350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5230 5350 50  0001 C CNN
-F 3 "" H 5300 5350 50  0000 C CNN
-	1    5300 5350
+P 5800 5350
+F 0 "R10" V 5900 5350 50  0000 C CNN
+F 1 "1k" V 5800 5350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5730 5350 50  0001 C CNN
+F 3 "" H 5800 5350 50  0000 C CNN
+	1    5800 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R11
 U 1 1 57218C7A
-P 6400 5550
-F 0 "R11" V 6480 5550 50  0000 C CNN
-F 1 "10k" V 6400 5550 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6330 5550 50  0001 C CNN
-F 3 "" H 6400 5550 50  0000 C CNN
-	1    6400 5550
+P 6800 5550
+F 0 "R11" V 6880 5550 50  0000 C CNN
+F 1 "10k" V 6800 5550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6730 5550 50  0001 C CNN
+F 3 "" H 6800 5550 50  0000 C CNN
+	1    6800 5550
 	1    0    0    -1  
 $EndComp
-Text GLabel 6300 5800 0    60   Input ~ 0
+Text GLabel 6700 5800 0    60   Input ~ 0
 D5
 $Comp
 L CONN_01X06 P2
 U 1 1 5724DB3A
-P 7700 3250
-F 0 "P2" H 7700 3600 50  0000 C CNN
-F 1 "serial breakout" V 7800 3250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 7700 3250 50  0001 C CNN
-F 3 "" H 7700 3250 50  0000 C CNN
-	1    7700 3250
+P 7800 3250
+F 0 "P2" H 7800 3600 50  0000 C CNN
+F 1 "serial breakout" V 7900 3250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 7800 3250 50  0001 C CNN
+F 3 "" H 7800 3250 50  0000 C CNN
+	1    7800 3250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -550,12 +551,12 @@ $EndComp
 $Comp
 L GND #PWR08
 U 1 1 5724DB46
-P 7400 3600
-F 0 "#PWR08" H 7400 3350 50  0001 C CNN
-F 1 "GND" H 7400 3450 50  0000 C CNN
-F 2 "" H 7400 3600 50  0000 C CNN
-F 3 "" H 7400 3600 50  0000 C CNN
-	1    7400 3600
+P 7400 4000
+F 0 "#PWR08" H 7400 3750 50  0001 C CNN
+F 1 "GND" H 7400 3850 50  0000 C CNN
+F 2 "" H 7400 4000 50  0000 C CNN
+F 3 "" H 7400 4000 50  0000 C CNN
+	1    7400 4000
 	1    0    0    -1  
 $EndComp
 Text GLabel 6800 3300 0    60   Input ~ 0
@@ -598,7 +599,7 @@ F 3 "" H 7150 3300 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L FDP7030BL Q1
+L STU60N3LH5 Q1
 U 1 1 5725C4D7
 P 6950 2100
 F 0 "Q1" V 6850 2150 50  0000 L CNN
@@ -620,7 +621,7 @@ F 3 "" H 8200 2300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D1
+L LED-RESCUE-mjspcb D1
 U 1 1 5725ED20
 P 9900 2000
 F 0 "D1" H 9900 1900 50  0000 C CNN
@@ -644,12 +645,12 @@ $EndComp
 $Comp
 L VCC #PWR010
 U 1 1 572B231F
-P 3100 5100
-F 0 "#PWR010" H 3100 4950 50  0001 C CNN
-F 1 "VCC" H 3100 5250 50  0000 C CNN
-F 2 "" H 3100 5100 50  0000 C CNN
-F 3 "" H 3100 5100 50  0000 C CNN
-	1    3100 5100
+P 4150 5100
+F 0 "#PWR010" H 4150 4950 50  0001 C CNN
+F 1 "VCC" H 4150 5250 50  0000 C CNN
+F 2 "" H 4150 5100 50  0000 C CNN
+F 3 "" H 4150 5100 50  0000 C CNN
+	1    4150 5100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -657,7 +658,7 @@ L CP C2
 U 1 1 572B36DA
 P 7700 1950
 F 0 "C2" H 7725 2050 50  0000 L CNN
-F 1 "10u" H 7725 1850 50  0000 L CNN
+F 1 "100u" H 7725 1850 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2" H 7738 1800 50  0001 C CNN
 F 3 "" H 7700 1950 50  0000 C CNN
 	1    7700 1950
@@ -677,12 +678,12 @@ $EndComp
 $Comp
 L VCC #PWR011
 U 1 1 572B48A0
-P 6600 5100
-F 0 "#PWR011" H 6600 4950 50  0001 C CNN
-F 1 "VCC" H 6600 5250 50  0000 C CNN
-F 2 "" H 6600 5100 50  0000 C CNN
-F 3 "" H 6600 5100 50  0000 C CNN
-	1    6600 5100
+P 7000 5100
+F 0 "#PWR011" H 7000 4950 50  0001 C CNN
+F 1 "VCC" H 7000 5250 50  0000 C CNN
+F 2 "" H 7000 5100 50  0000 C CNN
+F 3 "" H 7000 5100 50  0000 C CNN
+	1    7000 5100
 	1    0    0    -1  
 $EndComp
 Text GLabel 8400 3400 0    60   Input ~ 0
@@ -736,13 +737,13 @@ Text GLabel 1200 5700 0    60   Input ~ 0
 SDA
 Text GLabel 1200 5800 0    60   Input ~ 0
 SCL
-Text GLabel 2600 5400 0    60   Input ~ 0
+Text GLabel 3650 5400 0    60   Input ~ 0
 D8
 Text Notes 6100 4400 0    60   ~ 12
 power & programming
 Text Notes 800  6500 0    60   ~ 12
 standard sensors
-Text Notes 2950 4750 0    60   ~ 0
+Text Notes 3600 4750 0    60   ~ 0
 GPS module
 Text Notes 950  4750 0    60   ~ 0
 Air temperature and humidity sensor
@@ -806,17 +807,17 @@ $EndComp
 $Comp
 L R R8
 U 1 1 572C3594
-P 2850 5400
-F 0 "R8" V 2930 5400 50  0000 C CNN
-F 1 "1k" V 2850 5400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2780 5400 50  0001 C CNN
-F 3 "" H 2850 5400 50  0000 C CNN
-	1    2850 5400
+P 3900 5400
+F 0 "R8" V 3980 5400 50  0000 C CNN
+F 1 "1k" V 3900 5400 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3830 5400 50  0001 C CNN
+F 3 "" H 3900 5400 50  0000 C CNN
+	1    3900 5400
 	0    1    1    0   
 $EndComp
 Text GLabel 9200 3100 1    60   UnSpc ~ 0
 SW_GND
-Text GLabel 3100 5500 3    60   UnSpc ~ 0
+Text GLabel 4150 5500 3    60   UnSpc ~ 0
 SW_GND
 Text GLabel 9500 5400 0    60   Input ~ 0
 A0
@@ -855,6 +856,43 @@ F 2 "" H 9700 6200 50  0000 C CNN
 F 3 "" H 9700 6200 50  0000 C CNN
 	1    9700 6200
 	1    0    0    -1  
+$EndComp
+Text Notes 9350 4750 0    60   ~ 0
+Other sensors
+$Comp
+L STU60N3LH5 Q2
+U 1 1 57345F36
+P 9100 3350
+F 0 "Q2" H 9300 3425 50  0000 L CNN
+F 1 "STU60N3LH5" H 9300 3350 50  0000 L CNN
+F 2 "TO-251" H 9300 3275 50  0000 L CIN
+F 3 "" H 9100 3350 50  0000 L CNN
+	1    9100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X11 P8
+U 1 1 57385E54
+P 9950 5600
+F 0 "P8" H 9950 6200 50  0000 C CNN
+F 1 "perfboard breakout" V 10050 5600 50  0000 C CNN
+F 2 "meetjestad:Perf_board_connecttion_1x11" H 9950 5600 50  0001 C CNN
+F 3 "" H 9950 5600 50  0000 C CNN
+	1    9950 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 9500 5100 0    60   UnSpc ~ 0
+SW_GND
+$Comp
+L R R4
+U 1 1 57390377
+P 8650 3400
+F 0 "R4" V 8730 3400 50  0000 C CNN
+F 1 "1k" V 8650 3400 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8580 3400 50  0001 C CNN
+F 3 "" H 8650 3400 50  0000 C CNN
+	1    8650 3400
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	3100 1800 3700 1800
@@ -902,8 +940,6 @@ Wire Wire Line
 	1100 1900 1200 1900
 Connection ~ 1100 1600
 Wire Wire Line
-	1700 5600 1850 5600
-Wire Wire Line
 	4700 1150 4700 1300
 Wire Wire Line
 	3100 2450 3200 2450
@@ -920,22 +956,18 @@ Wire Wire Line
 Wire Wire Line
 	3100 3900 3200 3900
 Wire Wire Line
-	7900 5300 7700 5300
+	8100 5300 7900 5300
 Wire Wire Line
-	8200 5300 8400 5300
+	8400 5300 8600 5300
 Wire Wire Line
-	8300 5300 8300 5300
-Connection ~ 8300 5300
+	8500 5300 8500 5300
+Connection ~ 8500 5300
 Wire Wire Line
-	6600 5700 6600 5800
+	7000 5700 7000 5800
 Wire Wire Line
-	6600 5300 6600 5400
+	7000 5300 7000 5400
 Connection ~ 1100 1900
 Connection ~ 1100 3800
-Wire Wire Line
-	1200 5700 1850 5700
-Wire Wire Line
-	1200 5800 1850 5800
 Wire Wire Line
 	3100 3050 3900 3050
 Wire Wire Line
@@ -949,13 +981,9 @@ Wire Notes Line
 Wire Notes Line
 	800  4300 800  800 
 Wire Notes Line
-	4400 4600 10200 4600
+	5000 4600 5000 6400
 Wire Notes Line
-	4400 6400 10200 6400
-Wire Notes Line
-	4400 4600 4400 6400
-Wire Notes Line
-	10200 6400 10200 4600
+	10200 4600 10200 6400
 Wire Wire Line
 	1500 5600 1500 5700
 Connection ~ 1500 5700
@@ -983,46 +1011,38 @@ Wire Wire Line
 Wire Notes Line
 	5800 4300 5800 800 
 Wire Wire Line
-	5200 5100 5500 5100
+	5700 5100 6000 5100
 Wire Wire Line
-	4800 5100 4900 5100
+	5300 5100 5400 5100
 Wire Wire Line
-	5500 5200 5500 5700
+	6000 5200 6000 5700
 Wire Wire Line
-	5300 5100 5300 5200
-Connection ~ 5300 5100
+	5800 5100 5800 5200
+Connection ~ 5800 5100
 Wire Wire Line
-	5300 5500 5300 5600
+	5800 5500 5800 5600
 Wire Wire Line
-	5300 5600 5500 5600
-Connection ~ 5500 5600
-Connection ~ 6600 5300
+	5800 5600 6000 5600
+Connection ~ 6000 5600
+Connection ~ 7000 5300
 Wire Wire Line
-	6400 5300 6400 5400
-Connection ~ 6400 5300
+	6800 5300 6800 5400
+Connection ~ 6800 5300
 Wire Wire Line
-	6400 5700 6400 5800
+	6800 5700 6800 5800
 Wire Wire Line
-	6400 5800 6300 5800
+	6800 5800 6700 5800
 Wire Wire Line
-	6300 5300 6700 5300
-Wire Wire Line
-	7400 3000 7500 3000
+	6700 5300 7100 5300
 Connection ~ 7400 3100
-Wire Wire Line
-	6800 3400 7500 3400
 Wire Wire Line
 	6800 3500 7000 3500
 Wire Wire Line
-	7300 3500 7500 3500
-Wire Wire Line
 	6700 2200 6700 1500
-Wire Wire Line
-	7300 3300 7500 3300
 Wire Wire Line
 	6800 3300 7000 3300
 Wire Wire Line
-	7400 3000 7400 3600
+	7400 3000 7400 4000
 Wire Wire Line
 	7000 1400 7000 1900
 Connection ~ 7000 1400
@@ -1032,8 +1052,6 @@ Wire Wire Line
 	6700 1400 7300 1400
 Wire Wire Line
 	7400 1700 7800 1700
-Wire Wire Line
-	7400 3100 7500 3100
 Wire Wire Line
 	7700 1700 7700 1800
 Connection ~ 7700 1700
@@ -1053,11 +1071,9 @@ Wire Wire Line
 Connection ~ 8700 2200
 Connection ~ 9000 1700
 Wire Wire Line
-	6600 5100 6600 5200
+	7000 5100 7000 5200
 Wire Wire Line
-	6600 5200 6700 5200
-Wire Wire Line
-	1700 5600 1700 5900
+	7000 5200 7100 5200
 Wire Wire Line
 	3200 2200 3100 2200
 Wire Wire Line
@@ -1073,8 +1089,6 @@ Wire Wire Line
 Wire Wire Line
 	7300 1950 7300 3200
 Wire Wire Line
-	7300 3200 7500 3200
-Wire Wire Line
 	7300 1400 7300 1450
 Wire Wire Line
 	7150 2200 9000 2200
@@ -1085,25 +1099,19 @@ Wire Wire Line
 Wire Wire Line
 	3100 2950 3200 2950
 Wire Wire Line
-	1700 5500 1850 5500
-Wire Wire Line
-	1700 5100 1700 5500
-Wire Wire Line
 	1500 5300 1500 5200
-Wire Wire Line
-	1300 5200 1700 5200
 Connection ~ 1700 5200
 Wire Wire Line
 	1300 5300 1300 5200
 Connection ~ 1500 5200
 Wire Wire Line
-	3200 5400 3000 5400
+	4250 5400 4050 5400
 Wire Wire Line
-	3200 5300 3100 5300
+	4250 5300 4150 5300
 Wire Wire Line
-	3200 5200 3100 5200
+	4250 5200 4150 5200
 Wire Wire Line
-	3100 5200 3100 5100
+	4150 5200 4150 5100
 Wire Wire Line
 	3700 2900 3700 3050
 Connection ~ 3700 3050
@@ -1118,13 +1126,13 @@ Wire Notes Line
 Wire Notes Line
 	6100 800  6100 4300
 Wire Notes Line
-	4100 4600 4100 6400
+	4800 6400 4800 4600
 Wire Notes Line
-	4100 6400 800  6400
+	800  6400 4800 6400
 Wire Notes Line
 	800  6400 800  4600
 Wire Notes Line
-	800  4600 4100 4600
+	800  4600 4800 4600
 Wire Wire Line
 	8600 1700 9100 1700
 Wire Wire Line
@@ -1132,18 +1140,15 @@ Wire Wire Line
 Wire Wire Line
 	1100 1400 1100 2650
 Wire Wire Line
-	1100 2200 1200 2200
-Connection ~ 1100 2200
-Wire Wire Line
 	8800 3400 8900 3400
 Wire Wire Line
 	9200 3550 9200 3600
 Wire Wire Line
 	9200 3100 9200 3150
 Wire Wire Line
-	2600 5400 2700 5400
+	3650 5400 3750 5400
 Wire Wire Line
-	3100 5300 3100 5500
+	4150 5300 4150 5500
 Wire Wire Line
 	9600 5000 9600 5300
 Wire Wire Line
@@ -1168,51 +1173,94 @@ Wire Wire Line
 	9750 5200 9700 5200
 Wire Wire Line
 	9700 5200 9700 6200
-Text Notes 9350 4750 0    60   ~ 0
-Other sensors
-$Comp
-L STU60N3LH5 Q2
-U 1 1 57345F36
-P 9100 3350
-F 0 "Q2" H 9300 3425 50  0000 L CNN
-F 1 "STU60N3LH5" H 9300 3350 50  0000 L CNN
-F 2 "TO-251" H 9300 3275 50  0000 L CIN
-F 3 "" H 9100 3350 50  0000 L CNN
-	1    9100 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X11 P8
-U 1 1 57385E54
-P 9950 5600
-F 0 "P8" H 9950 6200 50  0000 C CNN
-F 1 "perfboard breakout" V 10050 5600 50  0000 C CNN
-F 2 "meetjestad:Perf_board_connecttion_1x11" H 9950 5600 50  0001 C CNN
-F 3 "" H 9950 5600 50  0000 C CNN
-	1    9950 5600
-	1    0    0    -1  
-$EndComp
-Text GLabel 9500 5100 0    60   UnSpc ~ 0
-SW_GND
 Wire Wire Line
 	9500 5100 9750 5100
-$Comp
-L R R4
-U 1 1 57390377
-P 8650 3400
-F 0 "R4" V 8730 3400 50  0000 C CNN
-F 1 "1k" V 8650 3400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8580 3400 50  0001 C CNN
-F 3 "" H 8650 3400 50  0000 C CNN
-	1    8650 3400
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8400 3400 8500 3400
 Wire Wire Line
-	7700 5500 8300 5500
+	7900 5500 8500 5500
 Wire Wire Line
-	8300 5500 8300 5300
+	8500 5500 8500 5300
 Wire Wire Line
-	7700 5200 8400 5200
+	7900 5200 8600 5200
+$Comp
+L JUMPER_3-PIN-CLOSED JP2
+U 1 1 58EE3207
+P 1900 5400
+F 0 "JP2" H 1900 5500 60  0000 C CNN
+F 1 "V1" H 1800 5300 60  0000 C CNN
+F 2 "meetjestad:SOLDER-JUMPER_2-WAY-CLOSED" H 1750 5400 60  0001 C CNN
+F 3 "" H 1900 5500 60  0001 C CNN
+	1    1900 5400
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	10200 6400 5000 6400
+Wire Notes Line
+	5000 4600 10200 4600
+$Comp
+L JUMPER_3-PIN-CLOSED JP3
+U 1 1 58EE90E7
+P 2300 5400
+F 0 "JP3" H 2300 5500 60  0000 C CNN
+F 1 "V2" H 2200 5300 60  0000 C CNN
+F 2 "meetjestad:SOLDER-JUMPER_2-WAY-CLOSED" H 2150 5400 60  0001 C CNN
+F 3 "" H 2300 5500 60  0001 C CNN
+	1    2300 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 5100 1700 5400
+Wire Wire Line
+	1200 5700 2550 5700
+Wire Wire Line
+	1200 5800 2550 5800
+Wire Wire Line
+	1300 5200 2450 5200
+Wire Wire Line
+	1700 5400 1750 5400
+Wire Wire Line
+	2050 5400 2150 5400
+Wire Wire Line
+	1900 5500 1900 5600
+Wire Wire Line
+	1900 5600 2550 5600
+Wire Wire Line
+	2300 5500 2550 5500
+Wire Wire Line
+	2450 5200 2450 5400
+Wire Wire Line
+	2100 5400 2100 5900
+Connection ~ 2100 5400
+$Comp
+L CONN_01X02 P9
+U 1 1 58F09344
+P 7800 3850
+F 0 "P9" H 7800 4000 50  0000 C CNN
+F 1 "reset" V 7900 3850 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 7800 3850 50  0001 C CNN
+F 3 "" H 7800 3850 50  0000 C CNN
+	1    7800 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7400 3900
+Wire Wire Line
+	7500 3800 7500 3500
+Connection ~ 7500 3500
+Wire Wire Line
+	7400 3000 7600 3000
+Wire Wire Line
+	7300 3200 7600 3200
+Wire Wire Line
+	7400 3100 7600 3100
+Wire Wire Line
+	7300 3300 7600 3300
+Wire Wire Line
+	6800 3400 7600 3400
+Wire Wire Line
+	7300 3500 7600 3500
+Wire Wire Line
+	7500 3800 7600 3800
+Wire Wire Line
+	7400 3900 7600 3900
 $EndSCHEMATC
