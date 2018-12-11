@@ -901,7 +901,7 @@ Wire Wire Line
 	6700 5300 6800 5300
 Connection ~ 7400 3100
 Wire Wire Line
-	6800 3500 7000 3500
+	6800 3500 6900 3500
 Wire Wire Line
 	6700 2200 6700 1500
 Wire Wire Line
@@ -1101,9 +1101,6 @@ F 3 "" H 7800 3800 50  0000 C CNN
 $EndComp
 Connection ~ 7400 3900
 Wire Wire Line
-	7500 3800 7500 3500
-Connection ~ 7500 3500
-Wire Wire Line
 	7400 3000 7600 3000
 Wire Wire Line
 	7300 3200 7600 3200
@@ -1114,9 +1111,7 @@ Wire Wire Line
 Wire Wire Line
 	6800 3400 7600 3400
 Wire Wire Line
-	7300 3500 7500 3500
-Wire Wire Line
-	7500 3800 7600 3800
+	6900 3800 7600 3800
 Wire Wire Line
 	7400 3900 7600 3900
 Wire Wire Line
@@ -1161,8 +1156,6 @@ Wire Wire Line
 	2950 3000 3150 3000
 Wire Wire Line
 	7400 3900 7400 4000
-Wire Wire Line
-	7500 3500 7600 3500
 $Comp
 L power:GND #PWR0101
 U 1 1 5C1542A1
@@ -1329,4 +1322,11 @@ Wire Wire Line
 	2350 3500 2450 3500
 Wire Wire Line
 	2450 3400 2350 3400
+Wire Wire Line
+	7300 3500 7600 3500
+Wire Wire Line
+	6900 3800 6900 3500
+Connection ~ 6900 3500
+Wire Wire Line
+	6900 3500 7000 3500
 $EndSCHEMATC
