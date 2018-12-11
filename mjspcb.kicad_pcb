@@ -495,7 +495,7 @@
     (at 213.233 116.60124 90)
     (descr "JST PH series connector, S2B-PH-KL")
     (path /5724DB66)
-    (fp_text reference P1** (at 3.31724 3.302 90) (layer F.SilkS) hide
+    (fp_text reference P10 (at 3.31724 3.302 90) (layer F.SilkS) hide
       (effects (font (size 0.8 0.8) (thickness 0.1)))
     )
     (fp_text value "2.7 - 6.0 VDC" (at 0 7.493 90) (layer F.SilkS) hide
@@ -539,7 +539,7 @@
   (module dc_socket (layer F.Cu) (tedit 57472AB2) (tstamp 574C600B)
     (at 216.73312 116.55298 90)
     (descr "Socket, DC power supply")
-    (fp_text reference DC (at 0 6.27888 90) (layer F.SilkS) hide
+    (fp_text reference DC1 (at 0 6.27888 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value P1* (at -3.33502 -0.19812 90) (layer F.SilkS) hide
