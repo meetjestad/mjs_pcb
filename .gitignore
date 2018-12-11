@@ -1,0 +1,6 @@
+*.bak
+*.cmp
+.idea/
+*.kicad_pcb-bak
+*.net
+*.pyc
