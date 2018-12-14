@@ -1430,4 +1430,70 @@ Wire Wire Line
 Wire Wire Line
 	7600 1300 7600 1850
 Connection ~ 7750 1300
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5C1363B0
+P 900 6900
+F 0 "H1" H 1000 6946 50  0000 L CNN
+F 1 "MountingHole" H 1000 6855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 900 6900 50  0001 C CNN
+F 3 "~" H 900 6900 50  0001 C CNN
+	1    900  6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5C136AFF
+P 900 7100
+F 0 "H2" H 1000 7146 50  0000 L CNN
+F 1 "MountingHole" H 1000 7055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 900 7100 50  0001 C CNN
+F 3 "~" H 900 7100 50  0001 C CNN
+	1    900  7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5C137424
+P 900 7300
+F 0 "H3" H 1000 7346 50  0000 L CNN
+F 1 "MountingHole" H 1000 7255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 900 7300 50  0001 C CNN
+F 3 "~" H 900 7300 50  0001 C CNN
+	1    900  7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5C13781B
+P 900 7500
+F 0 "H4" H 1000 7546 50  0000 L CNN
+F 1 "MountingHole" H 1000 7455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 900 7500 50  0001 C CNN
+F 3 "~" H 900 7500 50  0001 C CNN
+	1    900  7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 5C138248
+P 1900 7000
+F 0 "LOGO1" H 1900 7275 50  0001 C CNN
+F 1 "Open source hardware" H 2600 7000 50  0000 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 1900 7000 50  0001 C CNN
+F 3 "~" H 1900 7000 50  0001 C CNN
+	1    1900 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO2
+U 1 1 5C138C4E
+P 1900 7450
+F 0 "LOGO2" H 1900 7725 50  0001 C CNN
+F 1 "MJS Logo" H 2350 7450 50  0000 C CNN
+F 2 "meetjestad:mjs" H 1900 7450 50  0001 C CNN
+F 3 "~" H 1900 7450 50  0001 C CNN
+	1    1900 7450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
