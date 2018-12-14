@@ -1039,7 +1039,7 @@ U 1 1 58EE3207
 P 1900 5350
 F 0 "JP2" H 1900 5450 60  0000 C CNN
 F 1 "V1" H 1800 5250 60  0001 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 1750 5350 60  0001 C CNN
+F 2 "meetjestad:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 1750 5350 60  0001 C CNN
 F 3 "" H 1900 5450 60  0001 C CNN
 	1    1900 5350
 	1    0    0    -1  
@@ -1054,7 +1054,7 @@ U 1 1 58EE90E7
 P 2300 5350
 F 0 "JP3" H 2300 5450 60  0000 C CNN
 F 1 "V2" H 2200 5250 60  0001 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 2150 5350 60  0001 C CNN
+F 2 "meetjestad:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels" H 2150 5350 60  0001 C CNN
 F 3 "" H 2300 5450 60  0001 C CNN
 	1    2300 5350
 	1    0    0    -1  
