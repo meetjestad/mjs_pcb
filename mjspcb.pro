@@ -1,4 +1,4 @@
-update=Fri 14 Dec 2018 09:35:24 AM CET
+update=Tue 18 Dec 2018 06:18:01 PM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -22,7 +22,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=mjspcb.net
+LastNetListRead=
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0

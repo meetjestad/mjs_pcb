@@ -1500,4 +1500,197 @@ Text GLabel 8350 1600 1    60   Input ~ 0
 VIN
 Wire Wire Line
 	8350 1600 8350 1700
+$Comp
+L Connector_Generic:Conn_01x08 P14
+U 1 1 5C1DCA2A
+P 6650 6900
+F 0 "P14" H 6600 7300 50  0000 L CNN
+F 1 "HPMA115S0-XXX" V 6750 6550 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical" H 6650 6900 50  0001 C CNN
+F 3 "~" H 6650 6900 50  0001 C CNN
+	1    6650 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 P13
+U 1 1 5C32E565
+P 4850 6800
+F 0 "P13" H 4800 7000 50  0000 L CNN
+F 1 "grove analog" V 4950 6550 50  0000 L CNN
+F 2 "meetjestad:NS-Tech_Grove_1x04_P2mm_P2.54mm_Vertical_Alternative" H 4850 6800 50  0001 C CNN
+F 3 "~" H 4850 6800 50  0001 C CNN
+	1    4850 6800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4550 6800 0    60   Input ~ 0
+A1
+Text GLabel 4550 6700 0    60   Input ~ 0
+A0
+Wire Wire Line
+	4550 6700 4650 6700
+Wire Wire Line
+	4650 6800 4550 6800
+Text GLabel 4550 6900 0    60   Input ~ 0
+5V
+Text GLabel 4550 7000 0    60   Input ~ 0
+GND
+Wire Wire Line
+	4550 7000 4650 7000
+Wire Wire Line
+	4550 6900 4650 6900
+$Comp
+L Connector_Generic:Conn_01x04 P11
+U 1 1 5C39D375
+P 3700 6700
+F 0 "P11" H 3650 6900 50  0000 L CNN
+F 1 "grove i2c" V 3800 6500 50  0000 L CNN
+F 2 "Connector:NS-Tech_Grove_1x04_P2mm_Vertical" H 3700 6700 50  0001 C CNN
+F 3 "~" H 3700 6700 50  0001 C CNN
+	1    3700 6700
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 6700 0    60   Input ~ 0
+SDA
+Text GLabel 3400 6600 0    60   Input ~ 0
+SCL
+Wire Wire Line
+	3400 6600 3500 6600
+Wire Wire Line
+	3500 6700 3400 6700
+Text GLabel 3400 6800 0    60   Input ~ 0
+VCC
+Text GLabel 3400 6900 0    60   Input ~ 0
+GND
+Wire Wire Line
+	3400 6900 3500 6900
+Wire Wire Line
+	3400 6800 3500 6800
+$Comp
+L Connector_Generic:Conn_01x04 P12
+U 1 1 5C3A86AF
+P 3700 7250
+F 0 "P12" H 3650 7450 50  0000 L CNN
+F 1 "grove analog" V 3800 6950 50  0000 L CNN
+F 2 "meetjestad:NS-Tech_Grove_1x04_P2mm_P2.54mm_Vertical" H 3700 7250 50  0001 C CNN
+F 3 "~" H 3700 7250 50  0001 C CNN
+	1    3700 7250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 7250 0    60   Input ~ 0
+A1
+Text GLabel 3400 7150 0    60   Input ~ 0
+A0
+Wire Wire Line
+	3400 7150 3500 7150
+Wire Wire Line
+	3500 7250 3400 7250
+Text GLabel 3400 7350 0    60   Input ~ 0
+VCC
+Text GLabel 3400 7450 0    60   Input ~ 0
+GND
+Wire Wire Line
+	3400 7450 3500 7450
+Wire Wire Line
+	3400 7350 3500 7350
+Text Notes 4350 7150 0    60   ~ 0
+!! 5V for SDS011 !!
+Text Notes 6400 7100 2    39   ~ 0
+rx
+Text Notes 6400 7200 2    39   ~ 0
+tx
+Text GLabel 6300 7300 0    60   Input ~ 0
+GND
+Text GLabel 6300 7200 0    60   Input ~ 0
+D7
+Text GLabel 6300 7100 0    60   Input ~ 0
+D6
+Text GLabel 6300 6700 0    60   Input ~ 0
+5V
+NoConn ~ 6450 6600
+NoConn ~ 6450 6800
+NoConn ~ 6450 6900
+NoConn ~ 6450 7000
+Wire Wire Line
+	6300 6700 6450 6700
+Wire Wire Line
+	6450 7100 6300 7100
+Wire Wire Line
+	6300 7200 6450 7200
+Wire Wire Line
+	6450 7300 6300 7300
+Text Notes 5550 7450 0    60   ~ 0
+!! 5V for HPMA !!
+Text Notes 3150 7650 0    60   ~ 0
+A1 shared with P7
+Text Notes 5550 7550 0    60   ~ 0
+rx/tx viewed from MCU
+Text Notes 4350 7250 0    60   ~ 0
+Intended for softserial
+Text Notes 4650 6700 2    39   ~ 0
+rx
+Text Notes 4650 6800 2    39   ~ 0
+tx
+Text Notes 5550 7650 0    60   ~ 0
+D6/D7 shared with P7
+$Comp
+L Connector_Generic:Conn_01x12 P15
+U 1 1 5C49C38F
+P 10950 5600
+F 0 "P15" H 10900 6200 50  0000 L CNN
+F 1 "piggyback" V 11030 5501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 10950 5600 50  0001 C CNN
+F 3 "~" H 10950 5600 50  0001 C CNN
+	1    10950 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 10650 6200 0    60   Input ~ 0
+GND
+Text GLabel 10650 6100 0    60   Input ~ 0
+VCC
+Text GLabel 10650 6000 0    60   Input ~ 0
+5V
+Text GLabel 10650 5900 0    60   Input ~ 0
+VIN
+Text GLabel 10650 5800 0    60   Input ~ 0
+SCK
+Text GLabel 10650 5700 0    60   Input ~ 0
+MOSI
+Text GLabel 10650 5600 0    60   Input ~ 0
+MISO
+Text GLabel 10650 5500 0    60   Input ~ 0
+RST
+Text GLabel 10650 5400 0    60   Input ~ 0
+A0
+Text GLabel 10650 5300 0    60   Input ~ 0
+A1
+Text GLabel 10650 5200 0    60   Input ~ 0
+SCL
+Text GLabel 10650 5100 0    60   Input ~ 0
+SDA
+Wire Wire Line
+	10650 5100 10750 5100
+Wire Wire Line
+	10750 5200 10650 5200
+Wire Wire Line
+	10650 5300 10750 5300
+Wire Wire Line
+	10650 5400 10750 5400
+Wire Wire Line
+	10650 5500 10750 5500
+Wire Wire Line
+	10650 5600 10750 5600
+Wire Wire Line
+	10650 5700 10750 5700
+Wire Wire Line
+	10750 5800 10650 5800
+Wire Wire Line
+	10650 5900 10750 5900
+Wire Wire Line
+	10650 6000 10750 6000
+Wire Wire Line
+	10650 6100 10750 6100
+Wire Wire Line
+	10650 6200 10750 6200
+Text Notes 4350 7350 0    60   ~ 0
+A1 shared with P7
 $EndSCHEMATC
