@@ -39,13 +39,13 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 P3
 U 1 1 571A1889
-P 2750 5600
-F 0 "P3" H 2750 5850 50  0000 C CNN
-F 1 "I2C breakout" V 2850 5600 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2750 5600 50  0001 C CNN
-F 3 "" H 2750 5600 50  0000 C CNN
-	1    2750 5600
-	1    0    0    -1  
+P 2750 5700
+F 0 "P3" H 2750 5400 50  0000 C CNN
+F 1 "I2C breakout" V 2850 5700 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2750 5700 50  0001 C CNN
+F 3 "" H 2750 5700 50  0000 C CNN
+	1    2750 5700
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR03
