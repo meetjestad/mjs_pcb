@@ -105,7 +105,7 @@ U 1 1 571A618C
 P 6200 5100
 F 0 "P5" H 6200 5250 50  0000 C CNN
 F 1 "piezo" V 6300 5100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6200 5100 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 6200 5100 50  0001 C CNN
 F 3 "" H 6200 5100 50  0000 C CNN
 	1    6200 5100
 	1    0    0    -1  
@@ -129,7 +129,7 @@ U 1 1 571A70AE
 P 7300 5200
 F 0 "P6" H 7300 5350 50  0000 C CNN
 F 1 "BPW34" V 7400 5200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7300 5200 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7300 5200 50  0001 C CNN
 F 3 "" H 7300 5200 50  0000 C CNN
 	1    7300 5200
 	1    0    0    -1  
@@ -176,7 +176,7 @@ U 1 1 571AB793
 P 8800 5200
 F 0 "P7" H 8800 5350 50  0000 C CNN
 F 1 "electrodes" V 8900 5200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8800 5200 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 8800 5200 50  0001 C CNN
 F 3 "" H 8800 5200 50  0000 C CNN
 	1    8800 5200
 	1    0    0    -1  
