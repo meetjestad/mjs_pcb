@@ -42,7 +42,7 @@ U 1 1 571A1889
 P 2750 5700
 F 0 "P3" H 2750 5400 50  0000 C CNN
 F 1 "I2C breakout" V 2850 5700 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2750 5700 50  0001 C CNN
+F 2 "meetjestad:Molex_KK-254_44812-0004_1x04_P2.54mm_Vertical" H 2750 5700 50  0001 C CNN
 F 3 "" H 2750 5700 50  0000 C CNN
 	1    2750 5700
 	1    0    0    1   
