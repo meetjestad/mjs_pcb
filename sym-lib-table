@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name meetjestad)(type Legacy)(uri ${KIPRJMOD}/components/meetjestad.lib)(options "")(descr ""))
+  (lib (name mjspcb-rescue)(type Legacy)(uri ${KIPRJMOD}/mjspcb-rescue.lib)(options "")(descr ""))
+)

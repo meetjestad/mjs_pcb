@@ -21,9 +21,11 @@ The firmware typically used on these boards is published in the
 License
 -------
 The original MJS sensor board is designed by Harmen Zijp, together with
-Matthijs Kooijman.
+Matthijs Kooijman. The MJS2020 board is partly based on the original
+board and is designed by [KITT Engineering](https://www.kitt.nl/en/),
+together with Harmen Zijp and Matthijs Kooijman.
 
-The design for this board is open hardware and licensed
+The design for both boards is open hardware and licensed
 under the the CERN-OHL-W v2 license. Any designs derived from or
 containing parts of this design must be similarly licensed. See the
 LICENSE file for the full license text.
