@@ -44,10 +44,6 @@ Text GLabel 3025 9100 0    50   Input ~ 0
 Text GLabel 3700 12250 0    50   Input ~ 0
 3V-perm_CPU
 Wire Wire Line
-	3850 12700 3850 12650
-Wire Wire Line
-	3850 12600 3900 12600
-Wire Wire Line
 	3900 12300 3850 12300
 Wire Wire Line
 	3850 12200 3850 12250
@@ -93,17 +89,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 1700 3500 1750
 Connection ~ 3400 1700
-$Comp
-L mjspcb-rescue:Ferrite_Bead-Device-POC_Rev01-rescue FB1
-U 1 1 5F0B408C
-P 6250 1650
-F 0 "FB1" V 5976 1650 50  0000 C CNN
-F 1 "Ferrite_Bead" V 6067 1650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 1650 50  0001 C CNN
-F 3 "~" H 6250 1650 50  0001 C CNN
-	1    6250 1650
-	0    1    1    0   
-$EndComp
 Text Notes 2250 6850 0    50   ~ 0
 C1 and C2: High-quality external ceramic capacitors
 $Comp
@@ -124,38 +109,12 @@ PA9
 Text GLabel 5150 3000 2    50   Input ~ 0
 PA10
 Wire Wire Line
-	6050 1850 6050 1650
-$Comp
-L Device:C C7
-U 1 1 5F0B375E
-P 6050 2000
-F 0 "C7" H 6050 2075 50  0000 L CNN
-F 1 "1uF" H 6050 1925 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6088 1850 50  0001 C CNN
-F 3 "~" H 6050 2000 50  0001 C CNN
-	1    6050 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	4550 1750 4550 1650
 Wire Wire Line
-	5600 1650 5600 1850
-$Comp
-L Device:C C10
-U 1 1 5F135143
-P 5600 2000
-F 0 "C10" H 5600 2075 50  0000 L CNN
-F 1 "100nF" H 5600 1925 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5638 1850 50  0001 C CNN
-F 3 "~" H 5600 2000 50  0001 C CNN
-	1    5600 2000
-	1    0    0    -1  
-$EndComp
+	6050 1650 6050 1850
 Wire Wire Line
-	5600 2150 5600 2250
+	6050 2150 6050 2250
 Text GLabel 3350 1650 1    50   Input ~ 0
-3V-perm_CPU
-Text GLabel 6600 1500 1    50   Input ~ 0
 3V-perm_CPU
 Text Notes 2550 6750 0    50   ~ 0
 Crystal: ABS06-32.768KHZ-1-T\n
@@ -174,19 +133,6 @@ Wire Wire Line
 Connection ~ 3350 1700
 Wire Wire Line
 	3350 1700 3400 1700
-$Comp
-L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0109
-U 1 1 5F090296
-P 5800 2250
-F 0 "#PWR0109" H 5800 2000 50  0001 C CNN
-F 1 "GND" H 5805 2077 50  0000 C CNN
-F 2 "" H 5800 2250 50  0001 C CNN
-F 3 "" H 5800 2250 50  0001 C CNN
-	1    5800 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 2250 6050 2150
 Wire Wire Line
 	5150 3000 5100 3000
 Wire Wire Line
@@ -301,7 +247,7 @@ F 3 "" H 3000 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C2
 U 1 1 5F09E1C6
 P 3400 6300
 F 0 "C2" H 3300 6375 50  0000 L CNN
@@ -312,7 +258,7 @@ F 3 "~" H 3400 6300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C1
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C1
 U 1 1 5F09CACE
 P 3000 6300
 F 0 "C1" H 2900 6375 50  0000 L CNN
@@ -362,7 +308,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 6050 3000 6150
 $Comp
-L Device:C C13
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C13
 U 1 1 5F4B3421
 P 1400 4550
 F 0 "C13" H 1400 4475 50  0000 L CNN
@@ -385,41 +331,24 @@ L Connector:Conn_01x06_Male J12
 U 1 1 5F164959
 P 3600 7550
 F 0 "J12" H 3572 7432 50  0000 R CNN
-F 1 "Tag connect" H 4050 7150 50  0000 R CNN
-F 2 "meetjestad:Tag connect" H 3600 7550 50  0001 C CNN
+F 1 "SWD" H 4050 7150 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3600 7550 50  0001 C CNN
 F 3 "~" H 3600 7550 50  0001 C CNN
 	1    3600 7550
 	-1   0    0    1   
 $EndComp
-Text GLabel 3400 7550 0    50   Input ~ 0
-NRST
-$Comp
-L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0138
-U 1 1 5F194207
-P 2600 7700
-F 0 "#PWR0138" H 2600 7450 50  0001 C CNN
-F 1 "GND" H 2605 7527 50  0000 C CNN
-F 2 "" H 2600 7700 50  0001 C CNN
-F 3 "" H 2600 7700 50  0001 C CNN
-	1    2600 7700
-	1    0    0    -1  
-$EndComp
-Text GLabel 3400 7650 0    50   Input ~ 0
-PA13
 Text GLabel 3400 7450 0    50   Input ~ 0
+PA13
+Text GLabel 3400 7650 0    50   Input ~ 0
 PA14
-Text GLabel 3400 7750 0    50   Input ~ 0
-3V-perm_CPU
-Text Notes 2900 7700 0    50   ~ 0
-SWDIO\n
 Text Notes 2900 7500 0    50   ~ 0
-SWCLK\n
+SWDIO\n
 $Comp
 L mjspcb-rescue:STM32L072RBTx-meetjestad-POC_Rev01-rescue U5
 U 1 1 5F0E2263
 P 6250 2350
 F 0 "U5" H 3700 3131 50  0000 C CNN
-F 1 "STM32L072RBTx-meetjestad" H 4000 3300 50  0000 C CNN
+F 1 "STM32L072RZTx-meetjestad" H 4000 3300 50  0000 C CNN
 F 2 "meetjestad:STM32F072_LQFP-64" H 3850 3750 50  0001 C CNN
 F 3 "" H 3850 3750 50  0001 C CNN
 	1    6250 2350
@@ -474,7 +403,7 @@ Wire Wire Line
 Text GLabel 5950 8750 0    50   Input ~ 0
 3V-sw_GPS
 $Comp
-L Device:C C17
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C17
 U 1 1 5F72B9E7
 P 5600 9000
 F 0 "C17" H 5450 9075 50  0000 L CNN
@@ -507,7 +436,7 @@ F 3 "" H 5200 9150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C16
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C16
 U 1 1 5F72B9F9
 P 5200 9000
 F 0 "C16" H 5050 9075 50  0000 L CNN
@@ -574,13 +503,11 @@ Text GLabel 7000 9450 2    50   Input ~ 0
 PA2
 Text GLabel 7000 9550 2    50   Input ~ 0
 PA3
-Text GLabel 2350 12400 0    50   Input ~ 0
-PA0
-Text GLabel 2350 12500 0    50   Input ~ 0
+Text GLabel 2400 12700 0    50   Input ~ 0
 PA1
-Text GLabel 2350 12800 0    50   Input ~ 0
+Text GLabel 2200 12600 0    50   Input ~ 0
 PA4
-Text GLabel 5200 2000 2    50   Input ~ 0
+Text GLabel 5250 2000 2    50   Input ~ 0
 PA0
 Text GLabel 5200 2100 2    50   Input ~ 0
 PA1
@@ -588,22 +515,16 @@ Text GLabel 5200 2200 2    50   Input ~ 0
 PA2
 Text GLabel 5200 2300 2    50   Input ~ 0
 PA3
-Text GLabel 5200 2400 2    50   Input ~ 0
+Text GLabel 5250 2400 2    50   Input ~ 0
 PA4
-Text GLabel 5200 2500 2    50   Input ~ 0
+Text GLabel 5250 2500 2    50   Input ~ 0
 PA5
-Wire Wire Line
-	5200 2000 5100 2000
 Wire Wire Line
 	5100 2100 5200 2100
 Wire Wire Line
 	5200 2200 5100 2200
 Wire Wire Line
 	5100 2300 5200 2300
-Wire Wire Line
-	5200 2400 5100 2400
-Wire Wire Line
-	5100 2500 5200 2500
 Text GLabel 2250 2850 0    50   Input ~ 0
 PC3
 Text GLabel 2250 2750 0    50   Input ~ 0
@@ -658,165 +579,150 @@ $EndComp
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0143
 U 1 1 5F5FF70D
-P 8200 2650
-F 0 "#PWR0143" H 8200 2400 50  0001 C CNN
-F 1 "GND" H 8205 2477 50  0000 C CNN
-F 2 "" H 8200 2650 50  0001 C CNN
-F 3 "" H 8200 2650 50  0001 C CNN
-	1    8200 2650
+P 8450 3350
+F 0 "#PWR0143" H 8450 3100 50  0001 C CNN
+F 1 "GND" H 8455 3177 50  0000 C CNN
+F 2 "" H 8450 3350 50  0001 C CNN
+F 3 "" H 8450 3350 50  0001 C CNN
+	1    8450 3350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_Coaxial J13
 U 1 1 5F5FDFEA
-P 8200 2450
-F 0 "J13" H 8300 2425 50  0000 L CNN
-F 1 "Conn_Coaxial" H 8300 2334 50  0000 L CNN
-F 2 "meetjestad:SMA connector edge mount" H 8200 2450 50  0001 C CNN
-F 3 " ~" H 8200 2450 50  0001 C CNN
-	1    8200 2450
+P 8450 3150
+F 0 "J13" H 8550 3125 50  0000 L CNN
+F 1 "Conn_Coaxial" H 8550 3034 50  0000 L CNN
+F 2 "meetjestad:SMA connector edge mount" H 8450 3150 50  0001 C CNN
+F 3 " ~" H 8450 3150 50  0001 C CNN
+	1    8450 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 2550 6200 2550
+	6400 3250 6450 3250
 Wire Wire Line
-	6150 3050 6200 3050
-Text GLabel 6150 3150 0    50   Input ~ 0
+	6400 3750 6450 3750
+Text GLabel 6400 3850 0    50   Input ~ 0
 PB2
-Text GLabel 6150 3050 0    50   Input ~ 0
+Text GLabel 6400 3750 0    50   Input ~ 0
 PB1
-Text GLabel 6150 2550 0    50   Input ~ 0
-PA7
 Wire Wire Line
-	7550 2450 7550 2550
+	7800 3150 7800 3250
 Wire Wire Line
-	8000 2450 7550 2450
-Connection ~ 8250 3050
+	8250 3150 7800 3150
+Connection ~ 8500 3750
 Wire Wire Line
-	8450 3050 8250 3050
+	8700 3750 8500 3750
 Wire Wire Line
-	7850 3050 8250 3050
+	8100 3750 8500 3750
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0119
 U 1 1 5F5B2AA3
-P 8250 3350
-F 0 "#PWR0119" H 8250 3100 50  0001 C CNN
-F 1 "GND" H 8255 3177 50  0000 C CNN
-F 2 "" H 8250 3350 50  0001 C CNN
-F 3 "" H 8250 3350 50  0001 C CNN
-	1    8250 3350
+P 8500 4050
+F 0 "#PWR0119" H 8500 3800 50  0001 C CNN
+F 1 "GND" H 8505 3877 50  0000 C CNN
+F 2 "" H 8500 4050 50  0001 C CNN
+F 3 "" H 8500 4050 50  0001 C CNN
+	1    8500 4050
 	1    0    0    -1  
 $EndComp
-Connection ~ 7850 3050
+Connection ~ 8100 3750
 $Comp
-L Device:C C18
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C18
 U 1 1 5F54EC01
-P 8250 3200
-F 0 "C18" H 8100 3275 50  0000 L CNN
-F 1 "4.7uF" H 8025 3125 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8288 3050 50  0001 C CNN
-F 3 "~" H 8250 3200 50  0001 C CNN
-	1    8250 3200
+P 8500 3900
+F 0 "C18" H 8350 3975 50  0000 L CNN
+F 1 "4.7uF" H 8275 3825 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8538 3750 50  0001 C CNN
+F 3 "~" H 8500 3900 50  0001 C CNN
+	1    8500 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7250 2550 7550 2550
+	7500 3250 7800 3250
 Wire Wire Line
-	6650 3350 6650 3300
+	6900 4050 6900 4000
 Wire Wire Line
-	6750 3350 6650 3350
-Connection ~ 6750 3350
+	7000 4050 6900 4050
+Connection ~ 7000 4050
 Wire Wire Line
-	6850 3350 6850 3300
+	7100 4050 7100 4000
 Wire Wire Line
-	6750 3350 6850 3350
+	7000 4050 7100 4050
 Wire Wire Line
-	6750 3300 6750 3350
+	7000 4000 7000 4050
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0103
 U 1 1 5F0715F7
-P 6750 3350
-F 0 "#PWR0103" H 6750 3100 50  0001 C CNN
-F 1 "GND" H 6755 3177 50  0000 C CNN
-F 2 "" H 6750 3350 50  0001 C CNN
-F 3 "" H 6750 3350 50  0001 C CNN
-	1    6750 3350
+P 7000 4050
+F 0 "#PWR0103" H 7000 3800 50  0001 C CNN
+F 1 "GND" H 7005 3877 50  0000 C CNN
+F 2 "" H 7000 4050 50  0001 C CNN
+F 3 "" H 7000 4050 50  0001 C CNN
+	1    7000 4050
 	1    0    0    -1  
 $EndComp
-Connection ~ 7400 3050
+Connection ~ 7650 3750
 Wire Wire Line
-	7400 3050 7850 3050
+	7650 3750 8100 3750
 Wire Wire Line
-	7250 3050 7400 3050
+	7500 3750 7650 3750
 $Comp
-L Device:C C8
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C8
 U 1 1 5F061DC1
-P 7850 3200
-F 0 "C8" H 7750 3275 50  0000 L CNN
-F 1 "4.7uF" H 7625 3125 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7888 3050 50  0001 C CNN
-F 3 "~" H 7850 3200 50  0001 C CNN
-	1    7850 3200
+P 8100 3900
+F 0 "C8" H 8000 3975 50  0000 L CNN
+F 1 "4.7uF" H 7875 3825 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8138 3750 50  0001 C CNN
+F 3 "~" H 8100 3900 50  0001 C CNN
+	1    8100 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0102
 U 1 1 5F06412E
-P 7850 3350
-F 0 "#PWR0102" H 7850 3100 50  0001 C CNN
-F 1 "GND" H 7855 3177 50  0000 C CNN
-F 2 "" H 7850 3350 50  0001 C CNN
-F 3 "" H 7850 3350 50  0001 C CNN
-	1    7850 3350
+P 8100 4050
+F 0 "#PWR0102" H 8100 3800 50  0001 C CNN
+F 1 "GND" H 8105 3877 50  0000 C CNN
+F 2 "" H 8100 4050 50  0001 C CNN
+F 3 "" H 8100 4050 50  0001 C CNN
+	1    8100 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0101
 U 1 1 5F063276
-P 7400 3350
-F 0 "#PWR0101" H 7400 3100 50  0001 C CNN
-F 1 "GND" H 7405 3177 50  0000 C CNN
-F 2 "" H 7400 3350 50  0001 C CNN
-F 3 "" H 7400 3350 50  0001 C CNN
-	1    7400 3350
+P 7650 4050
+F 0 "#PWR0101" H 7650 3800 50  0001 C CNN
+F 1 "GND" H 7655 3877 50  0000 C CNN
+F 2 "" H 7650 4050 50  0001 C CNN
+F 3 "" H 7650 4050 50  0001 C CNN
+	1    7650 4050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C6
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C6
 U 1 1 5F0612E3
-P 7400 3200
-F 0 "C6" H 7300 3275 50  0000 L CNN
-F 1 "100nF" H 7150 3125 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7438 3050 50  0001 C CNN
-F 3 "~" H 7400 3200 50  0001 C CNN
-	1    7400 3200
+P 7650 3900
+F 0 "C6" H 7550 3975 50  0000 L CNN
+F 1 "100nF" H 7400 3825 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7688 3750 50  0001 C CNN
+F 3 "~" H 7650 3900 50  0001 C CNN
+	1    7650 3900
 	1    0    0    -1  
 $EndComp
-$Comp
-L mjspcb-rescue:LoRa_1262_G-NiceRF-meetjestad-POC_Rev01-rescue U2
-U 1 1 5F04666D
-P 7000 2900
-F 0 "U2" H 6750 3450 50  0000 C CNN
-F 1 "LoRa_1262_G-NiceRF" H 6750 3350 50  0000 C CNN
-F 2 "meetjestad:LoRa_1262_G-NiceRF" H 6900 3050 50  0001 C CNN
-F 3 "" H 6900 3050 50  0001 C CNN
-	1    7000 2900
-	1    0    0    -1  
-$EndComp
-Text GLabel 6150 2750 0    50   Input ~ 0
+Text GLabel 6400 3450 0    50   Input ~ 0
 PB3
-Text GLabel 6150 2950 0    50   Input ~ 0
+Text GLabel 6400 3650 0    50   Input ~ 0
 PB4
-Text GLabel 6150 2650 0    50   Input ~ 0
-PA15
-Text GLabel 8450 3050 2    50   Input ~ 0
+Text GLabel 8700 3750 2    50   Input ~ 0
 3V-perm_CPU
-Text GLabel 6150 2850 0    50   Input ~ 0
+Text GLabel 6400 3550 0    50   Input ~ 0
 PB5
 Wire Wire Line
-	6150 2850 6200 2850
+	6400 3550 6450 3550
 Wire Wire Line
-	6200 2950 6150 2950
+	6450 3650 6400 3650
 Text GLabel 2250 3250 0    50   Input ~ 0
 PC7
 Text GLabel 2250 3350 0    50   Input ~ 0
@@ -854,7 +760,7 @@ L Device:R R15
 U 1 1 5F5C8E53
 P 6050 11100
 F 0 "R15" V 6125 11025 50  0000 L CNN
-F 1 "10k" V 6050 11025 50  0000 L CNN
+F 1 "3k3" V 6050 11025 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5980 11100 50  0001 C CNN
 F 3 "~" H 6050 11100 50  0001 C CNN
 	1    6050 11100
@@ -893,8 +799,6 @@ PC3
 Wire Wire Line
 	6050 10750 5550 10750
 Connection ~ 6050 10750
-Wire Wire Line
-	5600 2250 5800 2250
 Text GLabel 5150 3300 2    50   Input ~ 0
 PA13
 Text GLabel 5150 3400 2    50   Input ~ 0
@@ -911,9 +815,6 @@ Wire Notes Line
 	650  700  9450 700 
 Wire Notes Line
 	600  6950 9400 6950
-Connection ~ 5800 2250
-Wire Wire Line
-	5800 2250 6050 2250
 Text GLabel 2250 3450 0    50   Input ~ 0
 PC9
 Wire Wire Line
@@ -926,9 +827,9 @@ Wire Wire Line
 	5100 4400 5550 4400
 Connection ~ 5550 4400
 Wire Wire Line
-	6200 3150 6150 3150
+	6450 3850 6400 3850
 $Comp
-L Device:C C3
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C3
 U 1 1 5F71EA91
 P 5550 10000
 F 0 "C3" H 5550 9925 50  0000 L CNN
@@ -974,11 +875,7 @@ F 3 "~" H 5400 9650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5700 9650 5550 9650
-Text GLabel 5250 9650 0    50   Input ~ 0
-PC2
-Text Notes 5325 9775 0    50   ~ 0
-DNP\n
+	5700 9650 5600 9650
 Text GLabel 2250 2950 0    50   Input ~ 0
 PC4
 Text GLabel 2250 3050 0    50   Input ~ 0
@@ -1004,7 +901,7 @@ U 1 1 5F366CA2
 P 2400 9350
 F 0 "J15" H 2500 8950 50  0000 C CNN
 F 1 "Temp/Hum" H 2600 9050 50  0000 C CNN
-F 2 "meetjestad:Grove_4pin&Header_4pin" H 2400 9350 50  0001 C CNN
+F 2 "meetjestad:SI7021" H 2400 9350 50  0001 C CNN
 F 3 "~" H 2400 9350 50  0001 C CNN
 	1    2400 9350
 	-1   0    0    -1  
@@ -1015,30 +912,24 @@ U 1 1 5F94F3C6
 P 2450 10650
 F 0 "J4" H 2500 10250 50  0000 C CNN
 F 1 "Oled" H 2550 10350 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2450 10650 50  0001 C CNN
+F 2 "meetjestad:OLED_1.3" H 2450 10650 50  0001 C CNN
 F 3 "~" H 2450 10650 50  0001 C CNN
 	1    2450 10650
 	-1   0    0    1   
 $EndComp
-Text GLabel 2400 12600 0    50   Input ~ 0
+Text GLabel 2400 13200 0    50   Input ~ 0
 PB15
-Text GLabel 2400 12700 0    50   Input ~ 0
-PB14
 Text GLabel 7425 5200 2    50   Input ~ 0
 PB15
 Text GLabel 7450 5100 2    50   Input ~ 0
 PB14
-Text GLabel 2400 13000 0    50   Input ~ 0
+Text GLabel 2400 13300 0    50   Input ~ 0
 PB11
-Text GLabel 2400 13100 0    50   Input ~ 0
+Text GLabel 2400 13400 0    50   Input ~ 0
 PB10
 Text GLabel 7425 4900 2    50   Input ~ 0
 PB12
 Text GLabel 7425 5000 2    50   Input ~ 0
-PB13
-Text GLabel 2400 13200 0    50   Input ~ 0
-PB12
-Text GLabel 2400 13300 0    50   Input ~ 0
 PB13
 Wire Wire Line
 	2300 2950 2250 2950
@@ -1046,11 +937,8 @@ Text GLabel 5200 2600 2    50   Input ~ 0
 PA6
 Wire Wire Line
 	5200 2600 5100 2600
-Text GLabel 3450 12650 0    50   Input ~ 0
+Text GLabel 3450 12600 0    50   Input ~ 0
 5V-sw
-Connection ~ 3850 12650
-Wire Wire Line
-	3850 12650 3850 12600
 Text GLabel 6400 8750 2    50   Input ~ 0
 3V-perm_CPU
 $Comp
@@ -1064,58 +952,10 @@ F 3 "~" H 1850 7550 50  0001 C CNN
 	1    1850 7550
 	0    1    -1   0   
 $EndComp
-$Comp
-L mjspcb-rescue:TestPoint_Small-Connector-mjspcb-rescue TP2
-U 1 1 5F630168
-P 6200 2750
-F 0 "TP2" H 6248 2796 50  0001 L CNN
-F 1 "TestPoint_Small" H 6248 2705 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 2750 50  0001 C CNN
-F 3 "~" H 6400 2750 50  0001 C CNN
-	1    6200 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L mjspcb-rescue:TestPoint_Small-Connector-mjspcb-rescue TP3
-U 1 1 5F6EBA61
-P 6200 2850
-F 0 "TP3" H 6248 2896 50  0001 L CNN
-F 1 "TestPoint_Small" H 6248 2805 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 2850 50  0001 C CNN
-F 3 "~" H 6400 2850 50  0001 C CNN
-	1    6200 2850
-	1    0    0    -1  
-$EndComp
-Connection ~ 6200 2850
-$Comp
-L mjspcb-rescue:TestPoint_Small-Connector-mjspcb-rescue TP4
-U 1 1 5F6ECD6C
-P 6200 2950
-F 0 "TP4" H 6248 2996 50  0001 L CNN
-F 1 "TestPoint_Small" H 6248 2905 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 2950 50  0001 C CNN
-F 3 "~" H 6400 2950 50  0001 C CNN
-	1    6200 2950
-	1    0    0    -1  
-$EndComp
-Connection ~ 6200 2950
-$Comp
-L mjspcb-rescue:TestPoint_Small-Connector-mjspcb-rescue TP1
-U 1 1 5F6EEC2B
-P 6200 2650
-F 0 "TP1" H 6248 2696 50  0001 L CNN
-F 1 "TestPoint_Small" H 6248 2605 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6400 2650 50  0001 C CNN
-F 3 "~" H 6400 2650 50  0001 C CNN
-	1    6200 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6150 2750 6200 2750
-Connection ~ 6200 2750
+	6400 3450 6450 3450
 Wire Wire Line
-	6200 2650 6150 2650
-Connection ~ 6200 2650
+	6450 3350 6400 3350
 Wire Wire Line
 	1800 9350 2200 9350
 Wire Wire Line
@@ -1129,8 +969,6 @@ Wire Wire Line
 	3850 12200 3900 12200
 Text GLabel 3650 12450 0    50   Input ~ 0
 3V-sw_sens
-Wire Wire Line
-	3850 12650 3450 12650
 Wire Wire Line
 	3650 12450 3850 12450
 Wire Wire Line
@@ -1215,26 +1053,9 @@ Wire Wire Line
 Wire Wire Line
 	900  4550 900  4700
 Wire Wire Line
-	1750 5100 1750 5200
-Wire Wire Line
-	1650 5200 1750 5200
-Wire Wire Line
 	2150 5200 1850 5200
-Wire Wire Line
-	1850 5200 1850 5100
-Text GLabel 1650 5200 0    50   Input ~ 0
+Text GLabel 1450 5200 0    50   Input ~ 0
 3V-perm_CPU
-$Comp
-L Connector:Conn_01x02_Male J11
-U 1 1 5F1E02F3
-P 1850 4900
-F 0 "J11" H 1958 5081 50  0000 C CNN
-F 1 "BOOT0" H 1958 4990 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 4900 50  0001 C CNN
-F 3 "~" H 1850 4900 50  0001 C CNN
-	1    1850 4900
-	0    1    1    0   
-$EndComp
 $Comp
 L Switch:SW_Push SW2
 U 1 1 5FC4DC96
@@ -1247,7 +1068,7 @@ F 3 "~" H 1500 1525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C36
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C36
 U 1 1 60611B92
 P 1500 1475
 F 0 "C36" H 1500 1400 50  0000 L CNN
@@ -1315,11 +1136,11 @@ Wire Wire Line
 Connection ~ 1800 1325
 Text GLabel 1800 9350 0    50   Input ~ 0
 PB7
-Text GLabel 2350 12200 0    50   Input ~ 0
+Text GLabel 2250 12100 0    50   Input ~ 0
 PB9
 Text GLabel 1800 9250 0    50   Input ~ 0
 PB6
-Text GLabel 2350 12300 0    50   Input ~ 0
+Text GLabel 2250 12200 0    50   Input ~ 0
 PB8
 Wire Wire Line
 	2250 10750 2150 10750
@@ -1328,12 +1149,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 1700 3500 1700
 Connection ~ 3500 1700
-Wire Wire Line
-	3400 7350 2600 7350
-Wire Wire Line
-	2600 7350 2600 7700
-Text GLabel 2350 13400 0    50   Input ~ 0
-PB0
 Text GLabel 5550 4100 1    50   Input ~ 0
 3V-perm_CPU
 Text GLabel 5850 4000 1    50   Input ~ 0
@@ -1348,7 +1163,7 @@ U 1 1 5FB0162E
 P 8850 9050
 F 0 "J10" H 8930 9042 50  0000 L CNN
 F 1 "Analog" H 8930 8951 50  0000 L CNN
-F 2 "meetjestad:Grove_4pin&Header_4pin" H 8850 9050 50  0001 C CNN
+F 2 "meetjestad:2,54_2.0pitchCombi" H 8850 9050 50  0001 C CNN
 F 3 "~" H 8850 9050 50  0001 C CNN
 	1    8850 9050
 	1    0    0    -1  
@@ -1388,7 +1203,7 @@ U 1 1 5FEFC2A6
 P 8850 9700
 F 0 "J18" H 8930 9692 50  0000 L CNN
 F 1 "I2C 3V_perm" H 8930 9601 50  0000 L CNN
-F 2 "meetjestad:Grove_4pin&Header_4pin" H 8850 9700 50  0001 C CNN
+F 2 "meetjestad:2,54_2.0pitchCombi" H 8850 9700 50  0001 C CNN
 F 3 "~" H 8850 9700 50  0001 C CNN
 	1    8850 9700
 	1    0    0    -1  
@@ -1399,7 +1214,7 @@ U 1 1 5FF3765A
 P 8850 10350
 F 0 "J19" H 8930 10342 50  0000 L CNN
 F 1 "I2C 5V_SW" H 8930 10251 50  0000 L CNN
-F 2 "meetjestad:Grove_4pin&Header_4pin" H 8850 10350 50  0001 C CNN
+F 2 "meetjestad:2,54_2.0pitchCombi" H 8850 10350 50  0001 C CNN
 F 3 "~" H 8850 10350 50  0001 C CNN
 	1    8850 10350
 	1    0    0    -1  
@@ -1491,7 +1306,7 @@ U 1 1 5FF72B1C
 P 8850 11000
 F 0 "J20" H 8930 10992 50  0000 L CNN
 F 1 "Multi" H 8930 10901 50  0000 L CNN
-F 2 "meetjestad:Grove_4pin&Header_4pin" H 8850 11000 50  0001 C CNN
+F 2 "meetjestad:2,54_2.0pitchCombi" H 8850 11000 50  0001 C CNN
 F 3 "~" H 8850 11000 50  0001 C CNN
 	1    8850 11000
 	1    0    0    -1  
@@ -1625,10 +1440,8 @@ F 3 "" H 2050 9800 50  0001 C CNN
 	1    2050 9800
 	1    0    0    -1  
 $EndComp
-Text Notes 1200 9400 0    50   ~ 0
-I2C1_SDA
 $Comp
-L Device:C C32
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C32
 U 1 1 5F6B096C
 P 1750 9600
 F 0 "C32" H 1750 9525 50  0000 L CNN
@@ -1662,9 +1475,9 @@ Text Notes 1750 13650 0    50   ~ 0
 I2C1_SCL
 Text Notes 1750 13550 0    50   ~ 0
 I2C1_SDA
-Text Notes 1550 13150 0    50   ~ 0
+Text Notes 1550 13450 0    50   ~ 0
 I2C2_SCL 5V_SW
-Text Notes 2150 13050 2    50   ~ 0
+Text Notes 2150 13350 2    50   ~ 0
 I2C2_SDA 5V_SW
 Text Notes 8000 9650 2    50   ~ 0
 I2C1_SCL
@@ -1674,71 +1487,30 @@ Text Notes 7650 10400 0    50   ~ 0
 I2C2_SDA
 Text Notes 8000 10300 2    50   ~ 0
 I2C2_SCL
-Text Notes 2150 12450 2    50   ~ 0
-ADC_IN0 / Dx\n
-Text Notes 2150 12550 2    50   ~ 0
+Text Notes 2200 12750 2    50   ~ 0
 ADC_IN1 / Dx
-Text GLabel 2350 12900 0    50   Input ~ 0
+Text GLabel 2200 12500 0    50   Input ~ 0
 PA5
-Text Notes 1350 12950 0    50   ~ 0
+Text Notes 1200 12550 0    50   ~ 0
 ADC_IN5 / DAC_OUT2
-Text Notes 2150 12850 2    50   ~ 0
+Text Notes 2050 12650 2    50   ~ 0
 ADC_IN4 / DAC_OUT1
-Text Notes 2150 12250 2    50   ~ 0
+Text Notes 2050 12150 2    50   ~ 0
 Dx
-Text Notes 2150 12350 2    50   ~ 0
+Text Notes 2050 12250 2    50   ~ 0
 Dx
-Text Notes 2150 12750 2    50   ~ 0
-SPI2_MISO / I2C2_SDA / I2S2_MCK
-Text Notes 2150 12650 2    50   ~ 0
+Text Notes 2150 13150 2    50   ~ 0
 SPI2_MOSI / I2S2_SD
-Text Notes 2150 13250 2    50   ~ 0
-SPI2_NSS / I2C2_SMBA / I2S2_WS\n
-Text Notes 2150 13350 2    50   ~ 0
-SPI2_SCK / I2C2_SCL / I2S2_CK\n
-Text Notes 2150 13450 2    50   ~ 0
-ADC_IN8 / VREF_OUT\n
-Wire Wire Line
-	2500 12200 2350 12200
-Wire Wire Line
-	2500 12300 2350 12300
-Wire Wire Line
-	2500 12400 2350 12400
-Wire Wire Line
-	2350 12500 2500 12500
-Wire Wire Line
-	2500 12600 2400 12600
 Wire Wire Line
 	2400 12700 2500 12700
 Wire Wire Line
-	2500 12800 2350 12800
+	2500 13300 2400 13300
 Wire Wire Line
-	2350 12900 2500 12900
-Wire Wire Line
-	2500 13000 2400 13000
-Wire Wire Line
-	2400 13100 2500 13100
-Wire Wire Line
-	2500 13200 2400 13200
-Wire Wire Line
-	2400 13300 2500 13300
-Wire Wire Line
-	2500 13400 2350 13400
+	2400 13400 2500 13400
 Wire Wire Line
 	2350 13500 2500 13500
 Wire Wire Line
 	2500 13600 2350 13600
-$Comp
-L Connector:Conn_01x15_Female J3
-U 1 1 645B1224
-P 2700 12900
-F 0 "J3" H 2650 11950 50  0000 C CNN
-F 1 "Prototype header" H 2400 12050 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical" H 2700 12900 50  0001 C CNN
-F 3 "~" H 2700 12900 50  0001 C CNN
-	1    2700 12900
-	1    0    0    1   
-$EndComp
 $Comp
 L Connector:Conn_01x06_Female J8
 U 1 1 5FD910F0
@@ -1750,17 +1522,15 @@ F 3 "~" H 4100 12500 50  0001 C CNN
 	1    4100 12500
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	3850 12700 3900 12700
-Text Notes 6700 11800 0    50   ~ 0
-Logo mjs
+Text Notes 6600 11850 0    50   ~ 0
+Logo mjs 16mm\n
 $Comp
 L Graphic:Logo_Open_Hardware_Small Logo_mjs1
 U 1 1 5FA17604
 P 6850 12100
 F 0 "Logo_mjs1" H 6850 12375 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Small" H 6850 11875 50  0001 C CNN
-F 2 "meetjestad:mjs_logo" H 6850 12100 50  0001 C CNN
+F 2 "meetjestad:mjs-logo-16mm" H 6850 12100 50  0001 C CNN
 F 3 "~" H 6850 12100 50  0001 C CNN
 	1    6850 12100
 	1    0    0    -1  
@@ -1802,89 +1572,25 @@ Wire Notes Line
 	6200 14150 6200 11750
 Wire Notes Line
 	600  11750 600  14150
-Text Notes 6550 12450 0    50   ~ 0
+Text Notes 6550 13000 0    50   ~ 0
 Logo open hardware
-$Comp
-L Graphic:Logo_Open_Hardware_Small Logo_mjs2
-U 1 1 5FFC60E8
-P 6850 12750
-F 0 "Logo_mjs2" H 6850 13025 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 6850 12525 50  0001 C CNN
-F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 6850 12750 50  0001 C CNN
-F 3 "~" H 6850 12750 50  0001 C CNN
-	1    6850 12750
-	1    0    0    -1  
-$EndComp
 $Comp
 L Graphic:Logo_Open_Hardware_Small Logo_kitt1
 U 1 1 5FA165E5
-P 6850 13400
-F 0 "Logo_kitt1" H 6850 13675 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 6850 13175 50  0001 C CNN
-F 2 "meetjestad:Kitt_logo" H 6850 13400 50  0001 C CNN
-F 3 "~" H 6850 13400 50  0001 C CNN
-	1    6850 13400
+P 6850 14400
+F 0 "Logo_kitt1" H 6850 14675 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6850 14175 50  0001 C CNN
+F 2 "meetjestad:Kitt_logo" H 6850 14400 50  0001 C CNN
+F 3 "~" H 6850 14400 50  0001 C CNN
+	1    6850 14400
 	1    0    0    -1  
 $EndComp
-Text Notes 6700 13100 0    50   ~ 0
+Text Notes 6700 14150 0    50   ~ 0
 Logo KITT\n
 Text GLabel 5100 4500 2    50   Input ~ 0
 PB8
 Text GLabel 5100 4600 2    50   Input ~ 0
 PB9
-Wire Wire Line
-	6600 1500 6600 1650
-Wire Wire Line
-	6600 1650 6400 1650
-Wire Wire Line
-	5600 1650 6050 1650
-Connection ~ 6050 1650
-Wire Wire Line
-	6050 1650 6100 1650
-Wire Wire Line
-	4550 1650 5600 1650
-Connection ~ 5600 1650
-Text GLabel 5000 8050 3    50   Input ~ 0
-PC6
-Text Notes 8250 7650 0    50   ~ 0
-Vout = 2V\n
-$Comp
-L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0146
-U 1 1 5F5A7A2E
-P 7800 7950
-F 0 "#PWR0146" H 7800 7700 50  0001 C CNN
-F 1 "GND" H 7805 7777 50  0000 C CNN
-F 2 "" H 7800 7950 50  0001 C CNN
-F 3 "" H 7800 7950 50  0001 C CNN
-	1    7800 7950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7650 7250 7800 7250
-$Comp
-L Device:R R25
-U 1 1 5F4EB3DF
-P 7800 7800
-F 0 "R25" V 7725 7725 50  0000 L CNN
-F 1 "100k" V 7800 7700 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7730 7800 50  0001 C CNN
-F 3 "~" H 7800 7800 50  0001 C CNN
-	1    7800 7800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R24
-U 1 1 5F4EB3D9
-P 7800 7400
-F 0 "R24" V 7725 7325 50  0000 L CNN
-F 1 "1M" V 7800 7350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7730 7400 50  0001 C CNN
-F 3 "~" H 7800 7400 50  0001 C CNN
-	1    7800 7400
-	1    0    0    -1  
-$EndComp
-Text GLabel 8050 7600 2    50   Input ~ 0
-PB0
 Connection ~ 6600 5900
 Wire Wire Line
 	7000 5900 6600 5900
@@ -1896,7 +1602,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 6350 7000 6350
 $Comp
-L Device:C C35
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C35
 U 1 1 5F69E0B4
 P 7000 6150
 F 0 "C35" H 6850 6225 50  0000 L CNN
@@ -1918,7 +1624,7 @@ F 3 "" H 5950 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C11
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C11
 U 1 1 5F0C7FC5
 P 6150 6150
 F 0 "C11" H 6000 6225 50  0000 L CNN
@@ -1929,7 +1635,7 @@ F 3 "~" H 6150 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C9
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C9
 U 1 1 5F0C8E61
 P 5700 6150
 F 0 "C9" H 5600 6225 50  0000 L CNN
@@ -1940,7 +1646,7 @@ F 3 "~" H 5700 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C5
 U 1 1 5F0D0352
 P 5250 6150
 F 0 "C5" H 5150 6225 50  0000 L CNN
@@ -1951,7 +1657,7 @@ F 3 "~" H 5250 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C12
 U 1 1 5F0D0F3C
 P 6600 6150
 F 0 "C12" H 6450 6225 50  0000 L CNN
@@ -2008,128 +1714,100 @@ Text GLabel 5950 5850 1    50   Input ~ 0
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0147
 U 1 1 5FA4C060
-P 6300 7950
-F 0 "#PWR0147" H 6300 7700 50  0001 C CNN
-F 1 "GND" H 6305 7777 50  0000 C CNN
-F 2 "" H 6300 7950 50  0001 C CNN
-F 3 "" H 6300 7950 50  0001 C CNN
-	1    6300 7950
+P 6150 8000
+F 0 "#PWR0147" H 6150 7750 50  0001 C CNN
+F 1 "GND" H 6155 7827 50  0000 C CNN
+F 2 "" H 6150 8000 50  0001 C CNN
+F 3 "" H 6150 8000 50  0001 C CNN
+	1    6150 8000
 	1    0    0    -1  
 $EndComp
-Text Notes 5450 7150 0    50   ~ 0
+Text Notes 5300 7200 0    50   ~ 0
 Battery voltage: 0V - 6V\nPC4 Voltage:    0V - 3V
 Wire Wire Line
-	5850 7250 5950 7250
-Text GLabel 5850 7250 0    50   Input ~ 0
+	5700 7300 5800 7300
+Text GLabel 5700 7300 0    50   Input ~ 0
 +BATT
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0144
 U 1 1 5F358704
-P 5950 7950
-F 0 "#PWR0144" H 5950 7700 50  0001 C CNN
-F 1 "GND" H 5955 7777 50  0000 C CNN
-F 2 "" H 5950 7950 50  0001 C CNN
-F 3 "" H 5950 7950 50  0001 C CNN
-	1    5950 7950
+P 5800 8000
+F 0 "#PWR0144" H 5800 7750 50  0001 C CNN
+F 1 "GND" H 5805 7827 50  0000 C CNN
+F 2 "" H 5800 8000 50  0001 C CNN
+F 3 "" H 5800 8000 50  0001 C CNN
+	1    5800 8000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R23
 U 1 1 5F334315
-P 5950 7800
-F 0 "R23" V 5875 7725 50  0000 L CNN
-F 1 "1M" V 5950 7750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5880 7800 50  0001 C CNN
-F 3 "~" H 5950 7800 50  0001 C CNN
-	1    5950 7800
+P 5800 7850
+F 0 "R23" V 5725 7775 50  0000 L CNN
+F 1 "1M" V 5800 7800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5730 7850 50  0001 C CNN
+F 3 "~" H 5800 7850 50  0001 C CNN
+	1    5800 7850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R22
 U 1 1 5F310D58
-P 5950 7400
-F 0 "R22" V 5875 7325 50  0000 L CNN
-F 1 "1M" V 5950 7350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5880 7400 50  0001 C CNN
-F 3 "~" H 5950 7400 50  0001 C CNN
-	1    5950 7400
+P 5800 7450
+F 0 "R22" V 5725 7375 50  0000 L CNN
+F 1 "1M" V 5800 7400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5730 7450 50  0001 C CNN
+F 3 "~" H 5800 7450 50  0001 C CNN
+	1    5800 7450
 	1    0    0    -1  
 $EndComp
-Text GLabel 6500 7600 2    50   Input ~ 0
+Text GLabel 6350 7650 2    50   Input ~ 0
 PC4
 $Comp
 L Device:R R35
 U 1 1 60116AB4
-P 4800 7900
-F 0 "R35" V 4725 7825 50  0000 L CNN
-F 1 "1k" V 4800 7850 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4730 7900 50  0001 C CNN
-F 3 "~" H 4800 7900 50  0001 C CNN
-	1    4800 7900
-	1    0    0    -1  
-$EndComp
-Text GLabel 4650 7250 0    50   Input ~ 0
-3V-perm_CPU
-Text GLabel 4800 8050 3    50   Input ~ 0
-PC8
-$Comp
-L meetjestad:JT-S3030_RGB_LED LED1
-U 1 1 60116ABD
-P 4500 7600
-F 0 "LED1" V 4596 6970 50  0000 R CNN
-F 1 "JT-S3030_RGB_LED" V 3800 7650 50  0000 R CNN
-F 2 "meetjestad:JT-S3030_RGB_LED" H 4500 7700 50  0001 C CNN
-F 3 "" H 4500 7700 50  0001 C CNN
-	1    4500 7600
-	0    -1   -1   0   
+P 4650 7450
+F 0 "R35" V 4575 7375 50  0000 L CNN
+F 1 "3k3" V 4650 7400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4580 7450 50  0001 C CNN
+F 3 "~" H 4650 7450 50  0001 C CNN
+	1    4650 7450
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R34
 U 1 1 60116AC3
-P 4600 7900
-F 0 "R34" V 4525 7825 50  0000 L CNN
-F 1 "1k" V 4600 7850 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4530 7900 50  0001 C CNN
-F 3 "~" H 4600 7900 50  0001 C CNN
-	1    4600 7900
-	1    0    0    -1  
+P 4450 7450
+F 0 "R34" V 4375 7375 50  0000 L CNN
+F 1 "3k3" V 4450 7400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4380 7450 50  0001 C CNN
+F 3 "~" H 4450 7450 50  0001 C CNN
+	1    4450 7450
+	-1   0    0    1   
 $EndComp
-Text GLabel 4600 8050 3    50   Input ~ 0
-PC7
 Wire Wire Line
-	4650 7250 4800 7250
+	5800 7650 5800 7700
 Wire Wire Line
-	4800 7250 4800 7350
-Wire Wire Line
-	5950 7600 5950 7650
-Wire Wire Line
-	5950 7550 5950 7600
-Connection ~ 5950 7600
+	5800 7600 5800 7650
+Connection ~ 5800 7650
 $Comp
-L Device:C C4
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C4
 U 1 1 5F9D8CCC
-P 6300 7800
-F 0 "C4" H 6300 7875 50  0000 L CNN
-F 1 "100nF" H 6300 7725 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6338 7650 50  0001 C CNN
-F 3 "~" H 6300 7800 50  0001 C CNN
-	1    6300 7800
+P 6150 7850
+F 0 "C4" H 6150 7925 50  0000 L CNN
+F 1 "100nF" H 6150 7775 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6188 7700 50  0001 C CNN
+F 3 "~" H 6150 7850 50  0001 C CNN
+	1    6150 7850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5950 7600 6300 7600
+	5800 7650 6150 7650
 Wire Wire Line
-	6300 7650 6300 7600
-Connection ~ 6300 7600
+	6150 7700 6150 7650
+Connection ~ 6150 7650
 Wire Wire Line
-	6300 7600 6500 7600
-Wire Wire Line
-	7800 7650 7800 7600
-Wire Wire Line
-	7800 7600 8050 7600
-Connection ~ 7800 7600
-Wire Wire Line
-	7800 7600 7800 7550
+	6150 7650 6350 7650
 Wire Notes Line
 	600  8450 9450 8450
 Wire Notes Line
@@ -2202,8 +1880,6 @@ Wire Wire Line
 	850  7250 850  7750
 Wire Wire Line
 	850  7250 2050 7250
-Text Notes 7550 7100 0    50   ~ 0
-Board ID\n
 Wire Wire Line
 	6150 4700 5100 4700
 Connection ~ 6150 4700
@@ -2211,7 +1887,7 @@ Wire Wire Line
 	5100 4800 6350 4800
 Connection ~ 6350 4800
 $Comp
-L Device:C C37
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C37
 U 1 1 5F6DBA3B
 P 6550 11100
 F 0 "C37" H 6550 11175 50  0000 L CNN
@@ -2257,13 +1933,13 @@ Wire Notes Line
 $Comp
 L Device:R R36
 U 1 1 60116AAE
-P 5000 7900
-F 0 "R36" V 4925 7825 50  0000 L CNN
-F 1 "1k" V 5000 7850 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4930 7900 50  0001 C CNN
-F 3 "~" H 5000 7900 50  0001 C CNN
-	1    5000 7900
-	1    0    0    -1  
+P 4250 7450
+F 0 "R36" V 4175 7375 50  0000 L CNN
+F 1 "3k3" V 4250 7400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4180 7450 50  0001 C CNN
+F 3 "~" H 4250 7450 50  0001 C CNN
+	1    4250 7450
+	-1   0    0    1   
 $EndComp
 Connection ~ 3850 13475
 Wire Wire Line
@@ -2281,8 +1957,6 @@ F 3 "" H 3800 13525 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3800 13475 3800 13525
-Text GLabel 7650 7250 0    50   Input ~ 0
-3V-sw_sens
 Wire Wire Line
 	13350 6450 13600 6450
 Connection ~ 13350 6450
@@ -2337,7 +2011,7 @@ U 1 1 5FF104FD
 P 14200 3550
 F 0 "J14" H 14308 3731 50  0000 C CNN
 F 1 "Lithium Ion" H 14308 3640 50  0000 C CNN
-F 2 "meetjestad:BatteryHolder_18650-PC2" H 14200 3550 50  0001 C CNN
+F 2 "meetjestad:Combi_2.0_2.45pitch_2PIN" H 14200 3550 50  0001 C CNN
 F 3 "~" H 14200 3550 50  0001 C CNN
 	1    14200 3550
 	-1   0    0    -1  
@@ -2490,26 +2164,23 @@ Wire Wire Line
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0148
 U 1 1 5FC947BC
-P 11050 1550
-F 0 "#PWR0148" H 11050 1300 50  0001 C CNN
-F 1 "GND" H 11055 1377 50  0000 C CNN
-F 2 "" H 11050 1550 50  0001 C CNN
-F 3 "" H 11050 1550 50  0001 C CNN
-	1    11050 1550
+P 10950 1550
+F 0 "#PWR0148" H 10950 1300 50  0001 C CNN
+F 1 "GND" H 10955 1377 50  0000 C CNN
+F 2 "" H 10950 1550 50  0001 C CNN
+F 3 "" H 10950 1550 50  0001 C CNN
+	1    10950 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11350 1200 11600 1200
-Connection ~ 11350 1200
 $Comp
 L Device:D_Zener D4
 U 1 1 5FC445F1
-P 11050 1400
-F 0 "D4" V 11000 1250 50  0000 L CNN
-F 1 "6,2V" V 11100 1200 50  0000 L CNN
-F 2 "meetjestad:D_SOD-123" H 11050 1400 50  0001 C CNN
-F 3 "~" H 11050 1400 50  0001 C CNN
-	1    11050 1400
+P 10950 1400
+F 0 "D4" V 10900 1250 50  0000 L CNN
+F 1 "6,2V" V 11000 1200 50  0000 L CNN
+F 2 "meetjestad:D_SOD-123" H 10950 1400 50  0001 C CNN
+F 3 "~" H 10950 1400 50  0001 C CNN
+	1    10950 1400
 	0    1    1    0   
 $EndComp
 Connection ~ 12400 1400
@@ -2543,8 +2214,6 @@ Connection ~ 10700 1200
 Wire Wire Line
 	10700 1200 10600 1200
 Wire Wire Line
-	11050 1200 11350 1200
-Wire Wire Line
 	14100 4850 14100 5000
 $Comp
 L Device:R R26
@@ -2568,7 +2237,7 @@ Wire Wire Line
 Wire Wire Line
 	14500 5000 14500 5100
 $Comp
-L Device:C C33
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C33
 U 1 1 5F5C3256
 P 14500 5250
 F 0 "C33" H 14500 5325 50  0000 L CNN
@@ -2579,7 +2248,7 @@ F 3 "~" H 14500 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C25
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C25
 U 1 1 5F535779
 P 12550 3150
 F 0 "C25" H 12400 3075 50  0000 L CNN
@@ -2651,13 +2320,9 @@ Connection ~ 10250 9250
 Wire Wire Line
 	10250 9300 10250 9250
 Wire Wire Line
-	10250 9650 12050 9650
-Wire Wire Line
 	10250 9650 10250 9600
-Wire Wire Line
-	10250 9250 11200 9250
 $Comp
-L Device:C C26
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C26
 U 1 1 5FB083B6
 P 12950 3150
 F 0 "C26" H 12950 3225 50  0000 L CNN
@@ -2715,10 +2380,10 @@ Connection ~ 12050 7750
 Wire Wire Line
 	11150 7750 12050 7750
 $Comp
-L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU1
+L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU2
 U 1 1 5FC7FCB1
 P 12100 7500
-F 0 "PSU1" H 12025 7875 50  0000 C CNN
+F 0 "PSU2" H 12025 7875 50  0000 C CNN
 F 1 "TPS7A02" H 12025 7784 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 12050 7900 50  0001 C CNN
 F 3 "" H 12050 7900 50  0001 C CNN
@@ -2754,7 +2419,7 @@ F 3 "" H 12050 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C20
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C20
 U 1 1 5FC7FC9C
 P 10600 7550
 F 0 "C20" H 10600 7475 50  0000 L CNN
@@ -2765,7 +2430,7 @@ F 3 "~" H 10600 7550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C21
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C21
 U 1 1 5FC7FC96
 P 12700 7550
 F 0 "C21" H 12700 7625 50  0000 L CNN
@@ -2800,10 +2465,10 @@ Connection ~ 12050 8700
 Wire Wire Line
 	11150 8700 12050 8700
 $Comp
-L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU4
+L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU3
 U 1 1 5F24D44A
 P 12100 8450
-F 0 "PSU4" H 12025 8825 50  0000 C CNN
+F 0 "PSU3" H 12025 8825 50  0000 C CNN
 F 1 "TPS7A02" H 12025 8734 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 12050 8850 50  0001 C CNN
 F 3 "" H 12050 8850 50  0001 C CNN
@@ -2820,9 +2485,8 @@ Wire Wire Line
 Connection ~ 12700 9250
 Wire Wire Line
 	12700 9250 12450 9250
-Connection ~ 11200 9250
 $Comp
-L Device:C C14
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C14
 U 1 1 5F23F3E3
 P 10250 9450
 F 0 "C14" H 10250 9550 50  0000 L CNN
@@ -2859,7 +2523,7 @@ F 3 "" H 13950 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C31
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C31
 U 1 1 5F9679D3
 P 13950 6700
 F 0 "C31" H 13800 6775 50  0000 L CNN
@@ -2889,7 +2553,7 @@ Wire Wire Line
 Wire Wire Line
 	10400 6850 10400 6800
 $Comp
-L Device:C C19
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C19
 U 1 1 5F649FBF
 P 10400 6650
 F 0 "C19" H 10400 6725 50  0000 L CNN
@@ -2928,7 +2592,7 @@ Wire Wire Line
 	10400 6500 10400 6450
 Connection ~ 13000 6850
 $Comp
-L Device:C C28
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C28
 U 1 1 5F630DE9
 P 13350 6650
 F 0 "C28" H 13200 6725 50  0000 L CNN
@@ -2939,7 +2603,7 @@ F 3 "~" H 13350 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C22
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C22
 U 1 1 5F617B55
 P 13000 6650
 F 0 "C22" H 12850 6725 50  0000 L CNN
@@ -3067,29 +2731,18 @@ Connection ~ 13350 1200
 Wire Wire Line
 	13350 1200 13500 1200
 $Comp
-L meetjestad:MCP73831 U6
-U 1 1 5F09B89A
-P 11950 1450
-F 0 "U6" H 11925 1925 50  0000 C CNN
-F 1 "MCP73831" H 11925 1834 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 11950 1800 50  0001 C CNN
-F 3 "" H 11950 1800 50  0001 C CNN
-	1    11950 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C27
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C27
 U 1 1 5F09C11A
-P 11350 1350
-F 0 "C27" H 11465 1396 50  0000 L CNN
-F 1 "4.7uF" H 11100 1300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11388 1200 50  0001 C CNN
-F 3 "~" H 11350 1350 50  0001 C CNN
-	1    11350 1350
+P 11250 1400
+F 0 "C27" H 11365 1446 50  0000 L CNN
+F 1 "4.7uF" H 11000 1350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11288 1250 50  0001 C CNN
+F 3 "~" H 11250 1400 50  0001 C CNN
+	1    11250 1400
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C30
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C30
 U 1 1 5F0A3EE7
 P 12900 1350
 F 0 "C30" H 13015 1396 50  0000 L CNN
@@ -3116,17 +2769,15 @@ Wire Wire Line
 	12250 1400 12400 1400
 Wire Wire Line
 	12400 1700 12400 1750
-Wire Wire Line
-	11450 1750 11600 1750
 $Comp
 L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0122
 U 1 1 5F14CCED
-P 11350 1500
-F 0 "#PWR0122" H 11350 1250 50  0001 C CNN
-F 1 "GND" H 11355 1327 50  0000 C CNN
-F 2 "" H 11350 1500 50  0001 C CNN
-F 3 "" H 11350 1500 50  0001 C CNN
-	1    11350 1500
+P 11250 1550
+F 0 "#PWR0122" H 11250 1300 50  0001 C CNN
+F 1 "GND" H 11255 1377 50  0000 C CNN
+F 2 "" H 11250 1550 50  0001 C CNN
+F 3 "" H 11250 1550 50  0001 C CNN
+	1    11250 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3151,18 +2802,9 @@ F 3 "" H 12400 1750 50  0001 C CNN
 	1    12400 1750
 	1    0    0    -1  
 $EndComp
-Text Notes 11100 2050 0    50   ~ 0
-Charge status\nTri-state logic output\n\n
 Connection ~ 12400 1750
-Text GLabel 11450 1750 0    50   Input ~ 0
-PC9
-Wire Wire Line
-	11050 1200 10700 1200
 Text Notes 12300 1800 1    50   ~ 0
 Ireg = 200mA
-Wire Wire Line
-	11050 1250 11050 1200
-Connection ~ 11050 1200
 Wire Wire Line
 	12800 1950 12800 2400
 Wire Wire Line
@@ -3264,23 +2906,6 @@ F 3 "~" H 10700 6450 50  0001 C CNN
 $EndComp
 Text Notes 12950 6350 0    50   ~ 0
 filter\n
-Wire Wire Line
-	11200 9250 11600 9250
-Wire Wire Line
-	11200 9350 11200 9250
-Wire Wire Line
-	11300 9350 11200 9350
-$Comp
-L mjspcb-rescue:R-Device-POC_Rev01-rescue R1
-U 1 1 5F4144F4
-P 11450 9350
-F 0 "R1" V 11550 9350 50  0000 C CNN
-F 1 "1k" V 11450 9350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11380 9350 50  0001 C CNN
-F 3 "~" H 11450 9350 50  0001 C CNN
-	1    11450 9350
-	0    1    1    0   
-$EndComp
 Text Notes 10750 8600 0    31   ~ 0
 H: Active\nL: Stand-by\n
 Connection ~ 13000 6450
@@ -3326,7 +2951,7 @@ F 3 "" H 12050 8750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C15
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C15
 U 1 1 5F24D462
 P 10600 8500
 F 0 "C15" H 10600 8600 50  0000 L CNN
@@ -3337,7 +2962,7 @@ F 3 "~" H 10600 8500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C24
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C24
 U 1 1 5F24D456
 P 12700 8500
 F 0 "C24" H 12700 8575 50  0000 L CNN
@@ -3368,7 +2993,7 @@ F 3 "" H 12050 9650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C23
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C23
 U 1 1 5F23F3D7
 P 12700 9450
 F 0 "C23" H 12700 9525 50  0000 L CNN
@@ -3379,10 +3004,10 @@ F 3 "~" H 12700 9450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU3
+L mjspcb-rescue:TPS7A02-meetjestad-POC_Rev01-rescue PSU1
 U 1 1 5F23F3CB
 P 12100 9400
-F 0 "PSU3" H 12025 9775 50  0000 C CNN
+F 0 "PSU1" H 12025 9775 50  0000 C CNN
 F 1 "TPS7A02" H 12025 9684 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 12050 9800 50  0001 C CNN
 F 3 "" H 12050 9800 50  0001 C CNN
@@ -3473,18 +3098,16 @@ Wire Wire Line
 Wire Wire Line
 	10550 6450 10400 6450
 $Comp
-L mjspcb-rescue:XC9140A501MR-G-meetjestad-POC_Rev01-rescue PSU2
+L mjspcb-rescue:XC9140A501MR-G-meetjestad-POC_Rev01-rescue PSU4
 U 1 1 5F29609B
 P 12350 6350
-F 0 "PSU2" H 12325 6575 50  0000 C CNN
+F 0 "PSU4" H 12325 6575 50  0000 C CNN
 F 1 "XC9140A501MR-G" H 12325 6484 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 12350 6350 50  0001 C CNN
 F 3 "" H 12350 6350 50  0001 C CNN
 	1    12350 6350
 	1    0    0    -1  
 $EndComp
-Text GLabel 9950 6550 0    50   Input ~ 0
-PC10
 Text GLabel 10950 7450 0    50   Input ~ 0
 PC11
 Text GLabel 10950 8400 0    50   Input ~ 0
@@ -3506,7 +3129,7 @@ F 3 "~" H 10900 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C29
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C29
 U 1 1 5F2CB29E
 P 11200 6650
 F 0 "C29" H 11200 6725 50  0000 L CNN
@@ -3554,7 +3177,7 @@ U 1 1 5F25C94A
 P 13350 4250
 F 0 "J6" H 13458 4431 50  0000 C CNN
 F 1 "Solar" H 13458 4340 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 13350 4250 50  0001 C CNN
+F 2 "meetjestad:Combi_2.0_2.45pitch_2PIN" H 13350 4250 50  0001 C CNN
 F 3 "~" H 13350 4250 50  0001 C CNN
 	1    13350 4250
 	1    0    0    -1  
@@ -3599,7 +3222,7 @@ F 3 "~" H 4050 9200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C34
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C34
 U 1 1 5F30A1F3
 P 3175 9300
 F 0 "C34" H 3175 9225 50  0000 L CNN
@@ -3626,7 +3249,7 @@ U 1 1 5F3A1702
 P 10450 2600
 F 0 "J17" H 10350 2300 50  0000 C CNN
 F 1 "USB_C_connector" H 10350 2250 50  0000 C CNN
-F 2 "632723300011_Eagle_WR-USB_rev20b:632723100011" H 10450 2600 50  0001 C CNN
+F 2 "meetjestad:USB-C_new" H 10450 2600 50  0001 C CNN
 F 3 "" H 10450 2600 50  0001 C CNN
 	1    10450 2600
 	1    0    0    -1  
@@ -3637,7 +3260,7 @@ U 1 1 5F715038
 P 7625 12675
 F 0 "H1" H 7725 12721 50  0000 L CNN
 F 1 "MountingHole" H 7725 12630 50  0000 L CNN
-F 2 "meetjestad:Mounting_hole" H 7625 12675 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7625 12675 50  0001 C CNN
 F 3 "~" H 7625 12675 50  0001 C CNN
 	1    7625 12675
 	1    0    0    -1  
@@ -3648,7 +3271,7 @@ U 1 1 5F716BC1
 P 7625 12925
 F 0 "H2" H 7725 12971 50  0000 L CNN
 F 1 "MountingHole" H 7725 12880 50  0000 L CNN
-F 2 "meetjestad:Mounting_hole" H 7625 12925 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7625 12925 50  0001 C CNN
 F 3 "~" H 7625 12925 50  0001 C CNN
 	1    7625 12925
 	1    0    0    -1  
@@ -3659,89 +3282,18 @@ U 1 1 5F74EAC9
 P 7625 13175
 F 0 "H3" H 7725 13221 50  0000 L CNN
 F 1 "MountingHole" H 7725 13130 50  0000 L CNN
-F 2 "meetjestad:Mounting_hole" H 7625 13175 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7625 13175 50  0001 C CNN
 F 3 "~" H 7625 13175 50  0001 C CNN
 	1    7625 13175
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R46
-U 1 1 5F7CD628
-P 7325 4750
-F 0 "R46" V 7400 4675 50  0000 L CNN
-F 1 "10k" V 7325 4675 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7255 4750 50  0001 C CNN
-F 3 "~" H 7325 4750 50  0001 C CNN
-	1    7325 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R45
-U 1 1 5F8056BE
-P 7225 4850
-F 0 "R45" V 7300 4775 50  0000 L CNN
-F 1 "10k" V 7225 4775 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7155 4850 50  0001 C CNN
-F 3 "~" H 7225 4850 50  0001 C CNN
-	1    7225 4850
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R44
-U 1 1 5F83D4D0
-P 7125 4950
-F 0 "R44" V 7200 4875 50  0000 L CNN
-F 1 "10k" V 7125 4875 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7055 4950 50  0001 C CNN
-F 3 "~" H 7125 4950 50  0001 C CNN
-	1    7125 4950
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R43
-U 1 1 5F8753F2
-P 7025 5050
-F 0 "R43" V 7100 4975 50  0000 L CNN
-F 1 "10k" V 7025 4975 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6955 5050 50  0001 C CNN
-F 3 "~" H 7025 5050 50  0001 C CNN
-	1    7025 5050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7425 5200 7025 5200
-Connection ~ 7025 5200
-Wire Wire Line
-	7025 5200 5100 5200
-Wire Wire Line
-	7450 5100 7125 5100
-Connection ~ 7125 5100
-Wire Wire Line
-	5100 5100 7125 5100
-Wire Wire Line
-	5100 5000 7225 5000
-Wire Wire Line
-	7225 5000 7425 5000
-Connection ~ 7225 5000
-Text GLabel 7400 4125 2    50   Input ~ 0
-3V-sw_sens
-Wire Wire Line
-	7025 4500 7025 4900
-Wire Wire Line
-	7125 4800 7125 4500
-Wire Wire Line
-	7225 4700 7225 4500
-Wire Wire Line
-	7325 4600 7325 4500
-Wire Wire Line
-	7325 4900 7425 4900
 $Comp
 L Jumper:SolderJumper_2_Open SP2
 U 1 1 5FD410A7
 P 2050 2100
 F 0 "SP2" V 2050 2012 50  0000 R CNN
 F 1 "SolderJumper_2_Open" H 2050 2214 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2050 2100 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2050 2100 50  0001 C CNN
 F 3 "~" H 2050 2100 50  0001 C CNN
 	1    2050 2100
 	0    -1   -1   0   
@@ -3749,12 +3301,12 @@ $EndComp
 Wire Wire Line
 	2150 1325 2150 2350
 $Comp
-L Jumper:SolderJumper_2_Open SP1
+L Jumper:SolderJumper_2_Open e1
 U 1 1 5FEAE8F4
 P 1900 2100
-F 0 "SP1" V 1900 2012 50  0000 R CNN
+F 0 "e1" V 1900 2012 50  0000 R CNN
 F 1 "SolderJumper_2_Open" H 1900 2214 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 1900 2100 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1900 2100 50  0001 C CNN
 F 3 "~" H 1900 2100 50  0001 C CNN
 	1    1900 2100
 	0    -1   -1   0   
@@ -3770,72 +3322,6 @@ Wire Wire Line
 Connection ~ 1900 1850
 Text Notes 700  2125 0    50   ~ 0
 Close for I2C communication
-Connection ~ 7325 4900
-Wire Wire Line
-	5100 4900 7325 4900
-$Comp
-L Jumper:SolderJumper_2_Open SP3
-U 1 1 600DF2BB
-P 7025 4350
-F 0 "SP3" V 7025 4262 50  0000 R CNN
-F 1 "SolderJumper_2_Open" H 7025 4464 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7025 4350 50  0001 C CNN
-F 3 "~" H 7025 4350 50  0001 C CNN
-	1    7025 4350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open SP4
-U 1 1 6011B797
-P 7125 4350
-F 0 "SP4" V 7125 4262 50  0000 R CNN
-F 1 "SolderJumper_2_Open" H 7125 4464 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7125 4350 50  0001 C CNN
-F 3 "~" H 7125 4350 50  0001 C CNN
-	1    7125 4350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open SP5
-U 1 1 60157C8A
-P 7225 4350
-F 0 "SP5" V 7225 4262 50  0000 R CNN
-F 1 "SolderJumper_2_Open" H 7225 4464 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7225 4350 50  0001 C CNN
-F 3 "~" H 7225 4350 50  0001 C CNN
-	1    7225 4350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open SP6
-U 1 1 60194154
-P 7325 4350
-F 0 "SP6" V 7325 4262 50  0000 R CNN
-F 1 "SolderJumper_2_Open" H 7325 4464 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7325 4350 50  0001 C CNN
-F 3 "~" H 7325 4350 50  0001 C CNN
-	1    7325 4350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7325 4125 7325 4200
-Wire Wire Line
-	7325 4125 7400 4125
-Wire Wire Line
-	7325 4125 7225 4125
-Wire Wire Line
-	7225 4125 7225 4200
-Connection ~ 7325 4125
-Wire Wire Line
-	7225 4125 7125 4125
-Wire Wire Line
-	7125 4125 7125 4200
-Connection ~ 7225 4125
-Wire Wire Line
-	7125 4125 7025 4125
-Wire Wire Line
-	7025 4125 7025 4200
-Connection ~ 7125 4125
 $Comp
 L Connector:TestPoint_Small TP5
 U 1 1 5F8931C6
@@ -3867,6 +3353,750 @@ F 1 "Test OK" H 8723 12405 50  0000 L CNN
 F 2 "meetjestad:Test OK" H 8875 12450 50  0001 C CNN
 F 3 "~" H 8875 12450 50  0001 C CNN
 	1    8675 12450
+	1    0    0    -1  
+$EndComp
+Text Notes 2900 7700 0    50   ~ 0
+SWCLK\n
+Text GLabel 3400 7350 0    50   Input ~ 0
+NRST
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0131
+U 1 1 60419D01
+P 3250 7550
+F 0 "#PWR0131" H 3250 7300 50  0001 C CNN
+F 1 "GND" H 3255 7377 50  0000 C CNN
+F 2 "" H 3250 7550 50  0001 C CNN
+F 3 "" H 3250 7550 50  0001 C CNN
+	1    3250 7550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 7550 3400 7550
+$Comp
+L mjspcb-rescue:LoRa_1262_G-NiceRF-meetjestad-POC_Rev01-rescue U2
+U 1 1 5F04666D
+P 7250 3600
+F 0 "U2" H 7000 4150 50  0000 C CNN
+F 1 "LoRa_1262_G-NiceRF" H 7000 4050 50  0000 C CNN
+F 2 "meetjestad:LoRa_1262_G-NiceRF" H 7150 3750 50  0001 C CNN
+F 3 "" H 7150 3750 50  0001 C CNN
+	1    7250 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4900 7425 4900
+Wire Wire Line
+	5100 5000 7425 5000
+Wire Wire Line
+	5100 5100 7450 5100
+Wire Wire Line
+	5100 5200 7425 5200
+Connection ~ 6050 1650
+Wire Wire Line
+	6500 1650 6550 1650
+Connection ~ 6500 1650
+Wire Wire Line
+	6050 1650 6500 1650
+Wire Wire Line
+	7050 1650 6850 1650
+Wire Wire Line
+	7050 1500 7050 1650
+Wire Wire Line
+	6250 2250 6500 2250
+Connection ~ 6250 2250
+Wire Wire Line
+	6050 2250 6250 2250
+Wire Wire Line
+	6500 2250 6500 2150
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0109
+U 1 1 5F090296
+P 6250 2250
+F 0 "#PWR0109" H 6250 2000 50  0001 C CNN
+F 1 "GND" H 6255 2077 50  0000 C CNN
+F 2 "" H 6250 2250 50  0001 C CNN
+F 3 "" H 6250 2250 50  0001 C CNN
+	1    6250 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 1500 1    50   Input ~ 0
+3V-perm_CPU
+$Comp
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C10
+U 1 1 5F135143
+P 6050 2000
+F 0 "C10" H 6050 2075 50  0000 L CNN
+F 1 "100nF" H 6050 1925 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6088 1850 50  0001 C CNN
+F 3 "~" H 6050 2000 50  0001 C CNN
+	1    6050 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C7
+U 1 1 5F0B375E
+P 6500 2000
+F 0 "C7" H 6500 2075 50  0000 L CNN
+F 1 "1uF" H 6500 1925 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6538 1850 50  0001 C CNN
+F 3 "~" H 6500 2000 50  0001 C CNN
+	1    6500 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1850 6500 1650
+$Comp
+L mjspcb-rescue:Ferrite_Bead-Device-POC_Rev01-rescue FB1
+U 1 1 5F0B408C
+P 6700 1650
+F 0 "FB1" V 6426 1650 50  0000 C CNN
+F 1 "Ferrite_Bead" V 6517 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6630 1650 50  0001 C CNN
+F 3 "~" H 6700 1650 50  0001 C CNN
+	1    6700 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 1650 6050 1650
+Wire Wire Line
+	5100 2400 5250 2400
+Wire Wire Line
+	5100 2500 5250 2500
+Wire Wire Line
+	5100 2000 5250 2000
+$Comp
+L Device:R R45
+U 1 1 60AFA25F
+P 2350 12500
+F 0 "R45" V 2425 12425 50  0000 L CNN
+F 1 "1k" V 2350 12425 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2280 12500 50  0001 C CNN
+F 3 "~" H 2350 12500 50  0001 C CNN
+	1    2350 12500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R44
+U 1 1 60AFA265
+P 2350 12600
+F 0 "R44" V 2425 12525 50  0000 L CNN
+F 1 "1k" V 2350 12525 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2280 12600 50  0001 C CNN
+F 3 "~" H 2350 12600 50  0001 C CNN
+	1    2350 12600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 12800 2350 12800
+Text Notes 2050 12450 2    50   ~ 0
+ADC_IN8 / VREF_OUT\n
+Text GLabel 2250 12400 0    50   Input ~ 0
+PB0
+Text GLabel 2250 12300 0    50   Input ~ 0
+PA15
+Text GLabel 2350 12800 0    50   Input ~ 0
+PC10
+$Comp
+L Connector:Conn_01x16_Female J2
+U 1 1 601777AA
+P 2700 12800
+F 0 "J2" H 2728 12776 50  0000 L CNN
+F 1 "Conn_01x16_Female" H 2728 12685 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 2700 12800 50  0001 C CNN
+F 3 "~" H 2700 12800 50  0001 C CNN
+	1    2700 12800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 12400 2250 12400
+Wire Wire Line
+	2250 12300 2500 12300
+Wire Wire Line
+	2500 12200 2250 12200
+Wire Wire Line
+	2250 12100 2500 12100
+Wire Wire Line
+	2500 13200 2400 13200
+Text GLabel 5150 9550 0    50   Input ~ 0
+PA0
+Text GLabel 5150 9650 0    50   Input ~ 0
+PH0
+$Comp
+L Device:R R43
+U 1 1 605511DB
+P 5400 9550
+F 0 "R43" V 5475 9500 50  0000 L CNN
+F 1 "1k" V 5400 9500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5330 9550 50  0001 C CNN
+F 3 "~" H 5400 9550 50  0001 C CNN
+	1    5400 9550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 9550 5250 9550
+Wire Wire Line
+	5250 9650 5150 9650
+Wire Wire Line
+	5550 9550 5600 9550
+Wire Wire Line
+	5600 9550 5600 9650
+Connection ~ 5600 9650
+Wire Wire Line
+	5600 9650 5550 9650
+Text GLabel 9950 6550 0    50   Input ~ 0
+PC12
+Text GLabel 6100 3250 0    50   Input ~ 0
+PC13
+Text GLabel 6400 3350 0    50   Input ~ 0
+PC2
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0152
+U 1 1 60828E4C
+P 7400 8000
+F 0 "#PWR0152" H 7400 7750 50  0001 C CNN
+F 1 "GND" H 7405 7827 50  0000 C CNN
+F 2 "" H 7400 8000 50  0001 C CNN
+F 3 "" H 7400 8000 50  0001 C CNN
+	1    7400 8000
+	1    0    0    -1  
+$EndComp
+Text Notes 6550 7200 0    50   ~ 0
+VBUS: 0V - 6V\nPA7 Voltage:    0V - 3V
+Wire Wire Line
+	6950 7300 7050 7300
+Text GLabel 6950 7300 0    50   Input ~ 0
+VBUS
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0157
+U 1 1 60828E55
+P 7050 8000
+F 0 "#PWR0157" H 7050 7750 50  0001 C CNN
+F 1 "GND" H 7055 7827 50  0000 C CNN
+F 2 "" H 7050 8000 50  0001 C CNN
+F 3 "" H 7050 8000 50  0001 C CNN
+	1    7050 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R47
+U 1 1 60828E5B
+P 7050 7850
+F 0 "R47" V 6975 7775 50  0000 L CNN
+F 1 "1M" V 7050 7800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6980 7850 50  0001 C CNN
+F 3 "~" H 7050 7850 50  0001 C CNN
+	1    7050 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R46
+U 1 1 60828E61
+P 7050 7450
+F 0 "R46" V 6975 7375 50  0000 L CNN
+F 1 "1M" V 7050 7400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6980 7450 50  0001 C CNN
+F 3 "~" H 7050 7450 50  0001 C CNN
+	1    7050 7450
+	1    0    0    -1  
+$EndComp
+Text GLabel 7600 7650 2    50   Input ~ 0
+PA7
+Wire Wire Line
+	7050 7650 7050 7700
+Wire Wire Line
+	7050 7600 7050 7650
+Connection ~ 7050 7650
+$Comp
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C38
+U 1 1 60828E6B
+P 7400 7850
+F 0 "C38" H 7400 7925 50  0000 L CNN
+F 1 "100nF" H 7400 7775 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7438 7700 50  0001 C CNN
+F 3 "~" H 7400 7850 50  0001 C CNN
+	1    7400 7850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 7650 7400 7650
+Wire Wire Line
+	7400 7700 7400 7650
+Connection ~ 7400 7650
+Wire Wire Line
+	7400 7650 7600 7650
+Wire Wire Line
+	2400 13100 2500 13100
+Text Notes 2150 12950 2    50   ~ 0
+SPI2_SCK / I2C2_SCL / I2S2_CK\n
+Text Notes 2150 13050 2    50   ~ 0
+SPI2_MISO / I2C2_SDA / I2S2_MCK
+Text GLabel 2400 13000 0    50   Input ~ 0
+PB13
+Text GLabel 2400 13100 0    50   Input ~ 0
+PB14
+Wire Wire Line
+	2500 12900 2400 12900
+Text Notes 2150 13250 2    50   ~ 0
+SPI2_NSS / I2C2_SMBA / I2S2_WS\n
+Text GLabel 2400 12900 0    50   Input ~ 0
+PB12
+Wire Wire Line
+	2500 13000 2400 13000
+Text GLabel 2300 3850 0    50   Input ~ 0
+PC13
+Text GLabel 2300 3750 0    50   Input ~ 0
+PC12
+Wire Wire Line
+	3450 12600 3900 12600
+Text GLabel 3400 12700 0    50   Input ~ 0
+VBUS
+Wire Wire Line
+	3900 12700 3400 12700
+Wire Wire Line
+	10700 1200 10950 1200
+Wire Wire Line
+	10950 1250 10950 1200
+Connection ~ 10950 1200
+Wire Wire Line
+	10950 1200 11250 1200
+Wire Wire Line
+	11250 1250 11250 1200
+Connection ~ 11250 1200
+Wire Wire Line
+	11250 1200 11500 1200
+$Comp
+L Device:LED D5
+U 1 1 6046C6B2
+P 11500 1350
+F 0 "D5" V 11539 1232 50  0000 R CNN
+F 1 "LED" V 11448 1232 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 11500 1350 50  0001 C CNN
+F 3 "~" H 11500 1350 50  0001 C CNN
+	1    11500 1350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 11500 1200
+Wire Wire Line
+	11600 1750 11600 1850
+Wire Wire Line
+	11600 1850 11500 1850
+Wire Wire Line
+	11500 1850 11500 1800
+Wire Wire Line
+	11500 1200 11600 1200
+$Comp
+L Device:R R25
+U 1 1 6046D472
+P 11500 1650
+F 0 "R25" V 11425 1575 50  0000 L CNN
+F 1 "10k" V 11500 1575 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11430 1650 50  0001 C CNN
+F 3 "~" H 11500 1650 50  0001 C CNN
+	1    11500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L meetjestad:MCP73831 U6
+U 1 1 5F09B89A
+P 11950 1450
+F 0 "U6" H 11925 1925 50  0000 C CNN
+F 1 "MCP73831" H 11925 1834 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 11950 1800 50  0001 C CNN
+F 3 "" H 11950 1800 50  0001 C CNN
+	1    11950 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 605E630F
+P 6250 3250
+F 0 "R1" V 6175 3175 50  0000 L CNN
+F 1 "1k" V 6250 3175 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 3250 50  0001 C CNN
+F 3 "~" H 6250 3250 50  0001 C CNN
+	1    6250 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 9250 11150 9250
+$Comp
+L Device:R R24
+U 1 1 60663716
+P 11450 9500
+F 0 "R24" V 11550 9425 50  0000 L CNN
+F 1 "100k" V 11450 9400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11380 9500 50  0001 C CNN
+F 3 "~" H 11450 9500 50  0001 C CNN
+	1    11450 9500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11450 9650 12050 9650
+Wire Wire Line
+	11600 9350 11450 9350
+Wire Wire Line
+	11450 9350 11300 9350
+Connection ~ 11450 9350
+Wire Wire Line
+	11200 9350 11150 9350
+Wire Wire Line
+	11150 9350 11150 9250
+Connection ~ 11150 9250
+Wire Wire Line
+	11150 9250 11600 9250
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0146
+U 1 1 6049203F
+P 4250 8000
+F 0 "#PWR0146" H 4250 7750 50  0001 C CNN
+F 1 "GND" H 4255 7827 50  0000 C CNN
+F 2 "" H 4250 8000 50  0001 C CNN
+F 3 "" H 4250 8000 50  0001 C CNN
+	1    4250 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0158
+U 1 1 604D05E9
+P 4450 8000
+F 0 "#PWR0158" H 4450 7750 50  0001 C CNN
+F 1 "GND" H 4455 7827 50  0000 C CNN
+F 2 "" H 4450 8000 50  0001 C CNN
+F 3 "" H 4450 8000 50  0001 C CNN
+	1    4450 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0159
+U 1 1 6050EB58
+P 4650 8000
+F 0 "#PWR0159" H 4650 7750 50  0001 C CNN
+F 1 "GND" H 4655 7827 50  0000 C CNN
+F 2 "" H 4650 8000 50  0001 C CNN
+F 3 "" H 4650 8000 50  0001 C CNN
+	1    4650 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4450 7300 1    50   Input ~ 0
+PC7
+Text GLabel 4650 7300 1    50   Input ~ 0
+PC8
+Text GLabel 4250 7300 1    50   Input ~ 0
+PC6
+$Comp
+L Device:LED_RGB D6
+U 1 1 6024B1A6
+P 4450 7800
+F 0 "D6" V 4496 7470 50  0000 R CNN
+F 1 "LED_RGB" V 4405 7470 50  0000 R CNN
+F 2 "meetjestad:JTS3535" H 4450 7750 50  0001 C CNN
+F 3 "~" H 4450 7750 50  0001 C CNN
+	1    4450 7800
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10500 10150 0    50   Input ~ 0
+3V-perm_CPU
+Text Notes 1200 9400 0    50   ~ 0
+I2C1_SDA
+Text GLabel 10450 10900 0    50   Input ~ 0
+PB7
+Text Notes 9850 10950 0    50   ~ 0
+I2C1_SDA
+Text GLabel 10450 11000 0    50   Input ~ 0
+PB6
+Text Notes 9850 11050 0    50   ~ 0
+I2C1_SCL
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0160
+U 1 1 604772E0
+P 10900 11750
+F 0 "#PWR0160" H 10900 11500 50  0001 C CNN
+F 1 "GND" H 10905 11577 50  0000 C CNN
+F 2 "" H 10900 11750 50  0001 C CNN
+F 3 "" H 10900 11750 50  0001 C CNN
+	1    10900 11750
+	1    0    0    -1  
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0161
+U 1 1 604B585E
+P 10450 11750
+F 0 "#PWR0161" H 10450 11500 50  0001 C CNN
+F 1 "GND" H 10455 11577 50  0000 C CNN
+F 2 "" H 10450 11750 50  0001 C CNN
+F 3 "" H 10450 11750 50  0001 C CNN
+	1    10450 11750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 10150 10700 10150
+Wire Wire Line
+	10700 10150 10700 10250
+Wire Wire Line
+	10700 10150 10900 10150
+Wire Wire Line
+	10900 10150 10900 10700
+Connection ~ 10700 10150
+Wire Wire Line
+	10500 10900 10450 10900
+Wire Wire Line
+	10450 11000 10500 11000
+Wire Wire Line
+	10450 11750 10450 11500
+Wire Wire Line
+	10450 11300 10500 11300
+Wire Wire Line
+	10500 11400 10450 11400
+Connection ~ 10450 11400
+Wire Wire Line
+	10450 11400 10450 11300
+Wire Wire Line
+	10450 11500 10500 11500
+Connection ~ 10450 11500
+Wire Wire Line
+	10450 11500 10450 11400
+Wire Wire Line
+	10900 11700 10900 11750
+Wire Notes Line
+	14950 10050 14950 12000
+Wire Notes Line
+	14950 12000 9600 12000
+Wire Notes Line
+	9600 12000 9600 10050
+Text Notes 9650 10150 0    50   ~ 0
+DNP\n
+$Comp
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C39
+U 1 1 604F3F03
+P 10700 10400
+F 0 "C39" H 10700 10325 50  0000 L CNN
+F 1 "100nF" H 10700 10475 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10738 10250 50  0001 C CNN
+F 3 "~" H 10700 10400 50  0001 C CNN
+	1    10700 10400
+	-1   0    0    1   
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0162
+U 1 1 60822F37
+P 10700 10550
+F 0 "#PWR0162" H 10700 10300 50  0001 C CNN
+F 1 "GND" H 10705 10377 50  0000 C CNN
+F 2 "" H 10700 10550 50  0001 C CNN
+F 3 "" H 10700 10550 50  0001 C CNN
+	1    10700 10550
+	1    0    0    -1  
+$EndComp
+Text Notes 11100 10700 0    50   ~ 0
+Address: 0011000
+$Comp
+L Sensor_Temperature:MCP9804_MSOP U7
+U 1 1 6027EDD0
+P 10900 11200
+F 0 "U7" H 11344 11246 50  0000 L CNN
+F 1 "MCP9808_MSOP" H 11344 11155 50  0000 L CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 9900 10700 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22203b.pdf" H 10650 11650 50  0001 C CNN
+	1    10900 11200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R48
+U 1 1 602900E5
+P 11500 2000
+F 0 "R48" V 11425 1925 50  0000 L CNN
+F 1 "10k" V 11500 1925 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11430 2000 50  0001 C CNN
+F 3 "~" H 11500 2000 50  0001 C CNN
+	1    11500 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 11450 2200 0    50   Input ~ 0
+PC9
+Wire Wire Line
+	11450 2200 11500 2200
+Wire Wire Line
+	11500 2200 11500 2150
+Wire Wire Line
+	13250 10150 13250 10250
+Wire Wire Line
+	13250 10150 13450 10150
+Wire Wire Line
+	13450 10150 13450 10700
+Connection ~ 13250 10150
+$Comp
+L mjspcb-rescue:C-Device-POC_Rev01-rescue C40
+U 1 1 605646AD
+P 13250 10400
+F 0 "C40" H 13250 10325 50  0000 L CNN
+F 1 "100nF" H 13250 10475 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 13288 10250 50  0001 C CNN
+F 3 "~" H 13250 10400 50  0001 C CNN
+	1    13250 10400
+	-1   0    0    1   
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0163
+U 1 1 605646B3
+P 13250 10550
+F 0 "#PWR0163" H 13250 10300 50  0001 C CNN
+F 1 "GND" H 13255 10377 50  0000 C CNN
+F 2 "" H 13250 10550 50  0001 C CNN
+F 3 "" H 13250 10550 50  0001 C CNN
+	1    13250 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L mjspcb-rescue:GND-power-POC_Rev01-rescue #PWR0164
+U 1 1 60671FD2
+P 13450 11750
+F 0 "#PWR0164" H 13450 11500 50  0001 C CNN
+F 1 "GND" H 13455 11577 50  0000 C CNN
+F 2 "" H 13450 11750 50  0001 C CNN
+F 3 "" H 13450 11750 50  0001 C CNN
+	1    13450 11750
+	1    0    0    -1  
+$EndComp
+Text GLabel 12850 10900 0    50   Input ~ 0
+PB15
+Text GLabel 14050 10900 2    50   Input ~ 0
+PB14
+Text GLabel 12850 11000 0    50   Input ~ 0
+PB13
+Text GLabel 12850 11100 0    50   Input ~ 0
+PH1
+$Comp
+L meetjestad:SST26VF032B U8
+U 1 1 60C899B1
+P 13450 10800
+F 0 "U8" H 14094 10546 50  0000 L CNN
+F 1 "SST26VF032B" H 14094 10455 50  0000 L CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 13730 10880 50  0001 C CNN
+F 3 "" H 13730 10880 50  0001 C CNN
+	1    13450 10800
+	1    0    0    -1  
+$EndComp
+Text GLabel 12850 11300 0    50   Input ~ 0
+3V-perm_CPU
+Text GLabel 3350 7750 0    50   Input ~ 0
+3V-perm_CPU
+Wire Wire Line
+	3400 7750 3350 7750
+Text Notes 11100 8650 1    50   ~ 0
+DNP\n
+Text Notes 11100 7700 1    50   ~ 0
+DNP\n
+Text Notes 11400 9600 1    50   ~ 0
+DNP\n
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 6079A4F9
+P 11200 9550
+F 0 "J3" V 11354 9362 50  0000 R CNN
+F 1 "Conn_01x02_Male" V 11263 9362 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11200 9550 50  0001 C CNN
+F 3 "~" H 11200 9550 50  0001 C CNN
+	1    11200 9550
+	0    -1   -1   0   
+$EndComp
+Connection ~ 11450 9650
+Wire Wire Line
+	10250 9650 11450 9650
+$Comp
+L Switch:SW_Push SW3
+U 1 1 606833F6
+P 1650 5200
+F 0 "SW3" H 1650 5485 50  0000 C CNN
+F 1 "SW_Push" H 1650 5394 50  0000 C CNN
+F 2 "meetjestad:Switch_Header2.54_Combi" H 1650 5400 50  0001 C CNN
+F 3 "~" H 1650 5400 50  0001 C CNN
+	1    1650 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 12050 10150 0    50   Input ~ 0
+3V-perm_CPU
+Wire Notes Line
+	9600 10050 14950 10050
+Wire Wire Line
+	12850 11200 12150 11200
+Wire Wire Line
+	12150 11200 12150 11150
+Wire Wire Line
+	12150 11200 12150 11250
+Connection ~ 12150 11200
+Wire Wire Line
+	12150 11550 12150 11600
+Wire Wire Line
+	12150 11600 13450 11600
+Wire Wire Line
+	13450 11500 13450 11600
+Connection ~ 13450 11600
+Wire Wire Line
+	13450 11600 13450 11750
+Wire Wire Line
+	12150 10850 12150 10150
+Wire Wire Line
+	12050 10150 12150 10150
+Connection ~ 12150 10150
+Wire Wire Line
+	12150 10150 13250 10150
+$Comp
+L Graphic:Logo_Open_Hardware_Small Logo_mjs3
+U 1 1 603E085E
+P 6850 12650
+F 0 "Logo_mjs3" H 6850 12925 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6850 12425 50  0001 C CNN
+F 2 "meetjestad:mjs-logo-22mm" H 6850 12650 50  0001 C CNN
+F 3 "~" H 6850 12650 50  0001 C CNN
+	1    6850 12650
+	1    0    0    -1  
+$EndComp
+Text Notes 6600 12400 0    50   ~ 0
+Logo mjs 22mm\n
+$Comp
+L Graphic:Logo_Open_Hardware_Small Logo_mjs2
+U 1 1 5FFC60E8
+P 6850 13250
+F 0 "Logo_mjs2" H 6850 13525 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6850 13025 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 6850 13250 50  0001 C CNN
+F 3 "~" H 6850 13250 50  0001 C CNN
+	1    6850 13250
+	1    0    0    -1  
+$EndComp
+Text Notes 6550 13600 0    50   ~ 0
+Logo open hardware
+$Comp
+L Graphic:Logo_Open_Hardware_Small Logo_mjs4
+U 1 1 606A51E4
+P 6850 13850
+F 0 "Logo_mjs4" H 6850 14125 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 6850 13625 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 6850 13850 50  0001 C CNN
+F 3 "~" H 6850 13850 50  0001 C CNN
+	1    6850 13850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R49
+U 1 1 608E3AE7
+P 12150 11000
+F 0 "R49" V 12250 10925 50  0000 L CNN
+F 1 "10k" V 12150 10900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 12080 11000 50  0001 C CNN
+F 3 "~" H 12150 11000 50  0001 C CNN
+	1    12150 11000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R50
+U 1 1 6096C447
+P 12150 11400
+F 0 "R50" V 12250 11325 50  0000 L CNN
+F 1 "10k" V 12150 11300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 12080 11400 50  0001 C CNN
+F 3 "~" H 12150 11400 50  0001 C CNN
+	1    12150 11400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
