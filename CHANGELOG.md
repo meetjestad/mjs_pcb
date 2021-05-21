@@ -1,3 +1,25 @@
+MJS2020 PROTO4 (2021-03)
+========================
+ - Replaced USB-C connector with one that is cheaper and can be
+   automatically placed during production (and does not expose all pins,
+   but we are not using USB3, so only need a few).
+ - Add more copper and room around Zener diode D4 to improve cooling and
+   allow using a bigger SMA diode. This should allowing somewhat bigger
+   solar panels without overheating problems (when the battery is full).
+ - Reduce thermal spoke size on battery and boot0 GND pins.
+ - Add some exposed GND copper around (usually unpopulated) sensor U7 on
+   the handle, to reduce chances of ESD damage when touching the PCB
+   there.
+ - Improve pad shapes for SPS030 and Si7021 connectors to make them
+   easier to solder (similar to the grove connector pads that were
+   improved in proto3).
+ - Relabel TX4/RX4 to TX3/RX3 to match the Arduino mapping rather than
+   the hardware (this is USART4 mapped to `Serial3`, because the
+   hardware has no USART3).
+ - Fix DRC courtyard errors by fixing, removing or reducing the
+   courtyard for some components and moving some components.
+ - Some small silkscreen improvements.
+
 MJS2020 PROTO3 (2021-02)
 ========================
 Fixes
