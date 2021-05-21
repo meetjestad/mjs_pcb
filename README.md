@@ -15,13 +15,9 @@ necessary configuration and support files to allow this, along with
 instructions can be found in the [mjs_boards
 repository](https://github.com/meetjestad/mjs_boards).
 
-For the MJS2020 board, the board files [are published
-separately](https://github.com/kittengineering/ArduinoCore-stm32l0) for
-now, but are expected to be integrated into the above repository in the
-future.
-
 The firmware typically used on these boards is published in the
-[mjs_firmware repository](https://github.com/meetjestad/mjs_firmware).
+[mjs_firmware repository](https://github.com/meetjestad/mjs_firmware)
+(mjs2020 branch for the MJS2020 board).
 
 License
 -------
