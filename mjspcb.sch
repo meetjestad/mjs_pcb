@@ -117,7 +117,7 @@ Wire Wire Line
 Text GLabel 3350 1650 1    50   Input ~ 0
 3V-perm_CPU
 Text Notes 2550 6750 0    50   ~ 0
-Crystal: ABS06-32.768KHZ-1-T\n
+Crystal: ABS06-32.768KHZ-7\n
 Text GLabel 1550 7650 0    50   Input ~ 0
 PA9
 Text Notes 1350 7700 2    50   ~ 0
